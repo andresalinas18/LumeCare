@@ -22,8 +22,9 @@ body, html {
 }
 
 .logo img {
+  max-height: 100px;
   height: auto;
-  width: 300px;
+  width: auto;
 }
 
 .logo{
@@ -32,11 +33,17 @@ body, html {
     color: white;
 }
 
-.menu a {
-  color: white;
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
   text-decoration: none;
-  margin-left: 20px;
-  font-size: 1rem;
+  color: white;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Hero Section */

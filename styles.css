@@ -10,6 +10,22 @@ body, html {
   height: 100%;
 }
 
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
 /* Navbar */
 .navbar {
   display: flex;

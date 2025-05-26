@@ -8,10 +8,17 @@
 body, html {
   font-family: 'Montserrat', sans-serif;
   height: 100%;
+  background-color: #F8F3ED; /* color principal */
+  color: #3a3a3a;
 }
 
-/* This is for mobile devices interface*/
+/* Responsive */
 @media (max-width: 768px) {
+  .hero-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .hero-content h1 {
     font-size: 2rem;
   }
@@ -26,7 +33,6 @@ body, html {
   }
 }
 
-
 /* Navbar */
 .navbar {
   display: flex;
@@ -34,8 +40,7 @@ body, html {
   justify-content: space-between; 
   padding: 20px 40px;
   width: 100%;
-  position: absolute;
-  z-index: 10;
+  background-color: #F8F3ED;
 }
 
 .logo img {
@@ -58,18 +63,29 @@ body, html {
 
 .nav-links a {
   text-decoration: none;
-  color: white;
-  font-weight: 500;
+  color: #D4B07F;
+  font-weight: 600;
+  transition: color 0.3s ease;
   font-family: 'Montserrat', sans-serif;
 }
 
+.nav-links a:hover {
+  color: #9DB5A3;
+}
+
 /* Hero Section */
+
+.hero-banner {
+  background-color: #F8F3ED;
+  padding: 80px 5%;
+}
+
 .hero-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 80px 5%;
-  background: #f5f8fa;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
@@ -80,11 +96,13 @@ body, html {
 
 .hero-left h1 {
   font-size: 2.8rem;
+  color: #D4B07F;
   margin-bottom: 20px;
 }
 
 .hero-left p {
   font-size: 1.2rem;
+  color: #3a3a3a;
   margin-bottom: 20px;
 }
 
@@ -96,22 +114,23 @@ body, html {
 .hero-left li {
   margin-bottom: 10px;
   font-size: 1rem;
+  color: #9DB5A3;
 }
 
 .hero-form {
   flex: 1;
   max-width: 400px;
-  background: #1a1a1a;
-  color: white;
+  background: white;
   border-radius: 12px;
   padding: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid #EFD8C5;
 }
 
 .hero-form h2 {
   margin-bottom: 20px;
   font-size: 1.5rem;
-  color: #fff;
+  color: #D4B07F;
 }
 
 .hero-form form {
@@ -124,24 +143,24 @@ body, html {
 .hero-form button {
   padding: 12px;
   border-radius: 8px;
-  border: none;
+  border: 1px solid #C5C9C3;
   font-size: 1rem;
 }
 
 .hero-form input {
-  background: #fff;
-  color: #000;
+  background: #F8F3ED;
+  color: #3a3a3a;
 }
 
 .hero-form button {
-  background: #0dcaf0;
+  background: #D4B07F;
   color: white;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease;
+  border: none;
 }
 
 .hero-form button:hover {
-  background: #0bb3d4;
+  background: #9DB5A3;
 }
-

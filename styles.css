@@ -107,6 +107,9 @@ body, html {
 .cta-button {
   background-color: #ff385c;
   color: white;
+  padding: 14px 28px;
+  text-decoration: none;
+  border-radius: 6px;
   font-weight: bold;
   transition: background 0.3s ease;
 }

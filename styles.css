@@ -12,26 +12,6 @@ body, html {
   color: #3a3a3a;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
 
 /* Navbar */
 .navbar {
@@ -94,15 +74,35 @@ body, html {
 }
 
 .hero-left h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   color: #D4B07F;
   margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-left .highlight {
+  color: #C5C9C3;
 }
 
 .hero-left p {
   font-size: 1.2rem;
   color: #3a3a3a;
   margin-bottom: 20px;
+  max-width: 90%;
+}
+
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.benefits li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #9DB5A3;
+  display: flex;
+  align-items: center;
 }
 
 .hero-left ul {
@@ -162,4 +162,26 @@ body, html {
 
 .hero-form button:hover {
   background: #9DB5A3;
+}
+
+/*Responsive*/
+@media (max-width: 768px) {
+  .hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-left p,
+  .benefits li {
+    font-size: 1rem;
+  }
+
+  .hero-form {
+    width: 100%;
+    margin-top: 30px;
+  }
 }

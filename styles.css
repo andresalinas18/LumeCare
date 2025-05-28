@@ -5,13 +5,25 @@
   box-sizing: border-box;
 }
 
-body, html {
+body {
   font-family: 'Montserrat', sans-serif;
-  height: 100%;
-  background-color: #F8F3ED; /* color principal */
-  color: #3a3a3a;
+  color: #3E3E3E;
+  background: url('images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 0;
+  pointer-events: none;
+}
+
+header, section {
+  position: relative;
+  z-index: 1;
+}
 
 /* Navbar */
 .navbar {
@@ -20,7 +32,7 @@ body, html {
   justify-content: space-between; 
   padding: 0px 40px;
   width: 100%;
-  background-color: #F8F3ED;
+  
 }
 
 .logo img {
@@ -55,9 +67,6 @@ body, html {
 
 /* Hero Section */
 
-.hero-banner {
-  background-color: #F8F3ED;
-}
 
 .hero-wrapper {
   display: flex;

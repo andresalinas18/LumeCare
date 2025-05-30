@@ -43,12 +43,22 @@
       <input type="text" placeholder="Last name*" required />
       <input type="email" placeholder="Email*" required />
       <input type="tel" placeholder="Phone number" />
+      <label for="treatment">What type of procedure are you interested in?</label>
+      <select id="treatment" name="treatment">
+        <option value="">-- Select one --</option>
+        <option value="Oral-Health">Oral Health</option>
+        <option value="Facial-treatment">Facial treatment</option>
+        <option value="Body-Procedures">Body Procedures</option>
+      </select>
+      <div id="treatment-details" style="display: none; margin-top: 15px;">
+        <label for="details">Describe the procedure you'd like:</label>
+        <textarea id="details" name="details" placeholder="Describe it here..." rows="4"></textarea>
+      </div>
       <button type="submit">Submit</button>
     </form>
     </div>
   </div>
 </section>
-
 
   
 </body>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LumeCare</title>
-    <link rel="icon" href="images/logoTransparency.ico" type="images/LumeCare-icon">
+    <link rel="icon" href="images/logoTransparency.ico" type="images/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -23,7 +23,7 @@
     </ul>
     </nav>
   </header>
-
+<main>
 <section class="hero-banner">
 <div class="hero-wrapper">
   <div class="hero-left">
@@ -38,11 +38,18 @@
 
   <div class="hero-form">
     <h2>Apply Now</h2>
-    <form>    
-      <input type="text" placeholder="First name*" required />
-      <input type="text" placeholder="Last name*" required />
-      <input type="email" placeholder="Email*" required />
-      <input type="tel" placeholder="Phone number" />
+      <form id="application-form" novalidate>
+            <label for="first-name" class="visually-hidden">First name*</label>
+            <input type="text" id="first-name" name="first-name" placeholder="First name*" required />
+
+            <label for="last-name" class="visually-hidden">Last name*</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Last name*" required />
+
+            <label for="email" class="visually-hidden">email*</label>
+            <input type="email" id="email" name="email" placeholder="Email*" required />
+
+            <label for="phone" class="visually-hidden">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone number" inputmode="tel" autocomplete="tel" />
       <label for="treatment">What type of procedure are you interested in?</label>
       <select id="treatment" name="treatment">
         <option value="">-- Select one --</option>
@@ -50,7 +57,7 @@
         <option value="Facial-treatment">Facial treatment</option>
         <option value="Body-Procedures">Body Procedures</option>
       </select>
-      <div id="treatment-details" style="display: none; margin-top: 15px;">
+      <div id="treatment-details">
         <label for="details">Describe the procedure you'd like:</label>
         <textarea id="details" name="details" placeholder="Describe it here..." rows="4"></textarea>
       </div>
@@ -59,7 +66,7 @@
     </div>
   </div>
 </section>
-
+</main>
 <script src="index.js" defer></script>
 </body>
 </html>

@@ -194,3 +194,20 @@ header, section {
     margin-top: 30px;
   }
 }
+
+form select, form input[type="text"] {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #C5C9C3;
+  font-size: 1rem;
+  width: 100%;
+}
+
+form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #C5C9C3;
+  font-size: 1rem;
+  width: 100%;
+  resize: vertical;
+}

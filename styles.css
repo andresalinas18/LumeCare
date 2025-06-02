@@ -191,6 +191,36 @@ header, section {
   white-space: nowrap;
 }
 
+.footer {
+  background-color: var(--background-light);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons a img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0) saturate(100%) invert(61%) sepia(19%) saturate(402%) hue-rotate(7deg) brightness(93%) contrast(87%);
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1);
+  filter: brightness(0) saturate(100%) invert(44%) sepia(20%) saturate(315%) hue-rotate(106deg) brightness(91%) contrast(91%);
+}
+
+.footer-text {
+  color: #555; 
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+}
 /* Responsive */
 
 @media (max-width: 768px) {

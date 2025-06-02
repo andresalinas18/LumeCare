@@ -191,10 +191,12 @@ header, section {
   white-space: nowrap;
 }
 
-.footer {
-  background-color: var(--background-light);
+footer {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  padding: 2rem 1rem;
   text-align: center;
-  padding: 2rem 0;
 }
 
 .social-icons {

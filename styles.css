@@ -95,9 +95,6 @@ header, section {
   line-height: 1.2;
 }
 
-.hero-left .highlight {
-  color: var(--border-color);
-}
 
 .hero-left p {
   font-size: 1.2rem;

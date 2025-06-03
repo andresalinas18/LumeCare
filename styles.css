@@ -2,6 +2,7 @@
    Root Variables & Reset
 ========================== */
 :root {
+  /*Colors*/
   --primary: #D4B07F;
   --primary-dark: #9DB5A3;
   --background-light: #F8F3ED;
@@ -9,6 +10,9 @@
   --accent: #EFD8C5;
   --text: #3E3E3E;
   --white: #fff;
+ /*family-fonts*/
+  --font-heading: 'Libre Baskerville', serif;
+  --font-body: 'Lato', sans-serif;
 }
 
 * {
@@ -18,10 +22,14 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-body);
   color: var(--text);
   background: url('images/background.jpg') no-repeat center center fixed;
   background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6, .logo-text {
+  font-family: var(--font-heading);
 }
 
 .overlay {
@@ -218,7 +226,7 @@ footer {
 .footer-text {
   color: #555; 
   font-size: 0.9rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-body);
 }
 /* Responsive */
 

@@ -239,7 +239,7 @@ footer {
   height: 100vh;
   background: var(--background-light);
   z-index: 9999;
-  padding: 20px 40px;
+  padding: 60px 40px;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
   transform: translateX(100%);

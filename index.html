@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LumeCare</title>
-    <link rel="icon" href="images/logoTransparency.ico" type="images/x-icon">
+    <meta name="description" content="Experience world-class aesthetic and medical treatments in Cali, Colombia. LumeCare supports international clients seeking health, beauty, and rejuvenation.">
+    <title>LumeCare | Aesthetic & Medical Travel to Cali, Colombia</title>
+    <link rel="icon" href="images/logoTransparency.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
@@ -13,27 +14,36 @@
   <!-- Overlay -->
   <div class="overlay"></div>
   <!-- Navbar -->
-    <header>
+  <header>
     <nav class="navbar">
-    <div class="logo">
-        <a href="/">
-        <img src="images/LumeCareLogo400x400.png" alt="LumeCareLogo">
-        </a>
-    </div>
-    <ul class="nav-links">
+      <div class="logo">
+        <a href="/"><img src="images/LumeCareLogo400x400.png" alt="LumeCareLogo"></a>
+      </div>
+
+      <!-- Desktop nav -->
+      <ul class="nav-links desktop-menu">
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#why-cali">Why Cali?</a></li>
         <li><a href="#quote">Get a Quote</a></li>
         <li><a href="#apply" class="apply-link">Apply</a></li>
-        <li><a href="#home">Home</a></li>
-    </ul>
-  <!-- toggle menu -->
-    <div class="menu-toggle" id="mobile-menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
+      </ul>
 
+          <!-- Hamburg Icon -->
+      <div id="mobile-menu-toggle" class="menu-icon">&#9776;</div>
+
+      <!-- Mobile nav -->
+      <div  id="mobile-menu" class="mobile-menu">
+        <div class="drawer-close" id="drawer-close">&#9776;</div>
+        <ul class="mobile-nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#why-cali">Why Cali?</a></li>
+          <li><a href="#quote">Get a Quote</a></li>
+          <li><a href="#apply" class="apply-link">Apply</a></li>
+          <li><a href="#home">Home</a></li>
+        </ul>
+      </div>
+      <div id="menu-overlay" class="menu-overlay"></div>
     </nav>
   </header>
 <!-- Hero Section -->
@@ -67,7 +77,7 @@
           <input type="tel" id="phone" name="phone" placeholder="Phone number" inputmode="tel" autocomplete="tel" />
 
           <label for="treatment">What type of procedure are you interested in?</label>
-          <select id="treatment" name="treatment">
+          <select id="treatment" name="treatment" required>
             <option value="">-- Select one --</option>
             <option value="Oral-Health">Oral Health</option>
             <option value="Facial-treatment">Facial treatment</option>
@@ -76,7 +86,7 @@
 
           <div id="treatment-details">
             <label for="details">Describe the procedure you'd like:</label>
-            <textarea id="details" name="details" placeholder="Describe it here..." rows="4"></textarea>
+            <textarea id="details" name="details" placeholder="Describe it here..." rows="4" required></textarea>
           </div>
 
           <button type="submit">Submit</button>

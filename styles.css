@@ -49,13 +49,13 @@ header, section, main,footer {
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  padding: 0px 40px;
+  padding: 0 2.5rem;
   width: 100%;
   
 }
 
 .logo img {
-  max-height: 150px;
+  max-height: 9.375rem;
   height: auto;
   width: auto;
 }
@@ -63,7 +63,7 @@ header, section, main,footer {
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
   list-style: none;
 }
 
@@ -85,8 +85,8 @@ header, section, main,footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 80px 5%;
-  gap: 40px;
+  padding: 5rem 5%;
+  gap: 2.5rem;
   flex-wrap: wrap;
 }
 
@@ -98,24 +98,24 @@ header, section, main,footer {
 .hero-left h1 {
   font-size: 3rem;
   color: var(--primary);
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   line-height: 1.2;
 }
 
 
 .hero-left p {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   max-width: 90%;
 }
 
 .benefits {
   list-style: none;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .benefits li {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   font-size: 1rem;
   color: var(--primary-dark);
   display: flex;
@@ -128,14 +128,14 @@ header, section, main,footer {
   flex: 1;
   max-width: 400px;
   background: var(--white);
-  border-radius: 12px;
-  padding: 30px;
+  border-radius: 0.75rem;
+  padding: 2rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   border: 2px solid var(--accent);
 }
 
 .hero-form h2 {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   font-size: 1.5rem;
   color: var(--primary);
 }
@@ -143,7 +143,7 @@ header, section, main,footer {
 .hero-form form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .hero-form input,
@@ -151,8 +151,8 @@ header, section, main,footer {
 .hero-form textarea,
 .hero-form button {
   width: 100%;
-  padding: 12px;
-  border-radius: 8px;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
   font-size: 1rem;
   border: 1px solid var(--border-color);
 }
@@ -179,7 +179,7 @@ header, section, main,footer {
 
 #treatment-details {
   display: none;
-  margin-top: 15px;
+  margin-top: 0.9375rem;
 }
 
 /* Accessibility */
@@ -210,8 +210,8 @@ footer {
 }
 
 .social-icons a img {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   transition: transform 0.3s ease, filter 0.3s ease;
   filter: brightness(0) saturate(100%) invert(61%) sepia(19%) saturate(402%) hue-rotate(7deg) brightness(93%) contrast(87%);
 }
@@ -235,11 +235,11 @@ footer {
   position: fixed;
   top: 0;
   right: 0;
-  width: 100vw;
+  width: 60vw;
   height: 100vh;
   background: var(--background-light);
   z-index: 9999;
-  padding: 60px 40px;
+  padding: 3.75rem 2.5rem;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
   transform: translateX(100%);
@@ -253,7 +253,7 @@ footer {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .mobile-nav a {
@@ -273,7 +273,7 @@ footer {
 
 
 
-/* Overlay para cerrar el menú */
+/* Overlay close the menu */
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -297,10 +297,27 @@ footer {
   color: var(--primary);
   align-self: flex-end;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
+
+
 /* Responsive */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  
+  .hero-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .hero-left, .hero-form {
+    max-width: 90%;
+  }
+}
+
 
 @media (max-width: 768px) {
   .hero-wrapper {
@@ -308,8 +325,17 @@ footer {
     text-align: center;
   }
 
+  .hero-left {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
   .hero-left h1 {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
   }
 
   .hero-left p,
@@ -317,9 +343,32 @@ footer {
     font-size: 1rem;
   }
 
+  .hero-left p {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .hero-left p:nth-of-type(2) {
+    font-style: italic;
+    color: #7a6c5d; 
+  }
+
+  .hero-left ul.benefits {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.2rem;
+  }
+
+  .hero-left ul.benefits li {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    color: #4b5d56; 
+    font-weight: 500;
+  }
+
   .hero-form {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
 
 
@@ -331,4 +380,26 @@ footer {
     display: none;
   }
 
+}
+
+
+
+/* small mobiles */
+@media (max-width: 480px) {
+  
+  .hero-left h1 {
+    font-size: 1.3rem;
+  }
+
+  .hero-form {
+    padding: 1.25rem;
+  }
+
+  .hero-form input,
+  .hero-form select,
+  .hero-form textarea,
+  .hero-form button {
+    padding: 0.625rem;
+    font-size: 0.95rem;
+  }
 }

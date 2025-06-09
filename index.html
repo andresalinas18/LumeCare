@@ -8,11 +8,11 @@
     <link rel="icon" href="images/logoTransparency.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
   <!-- Overlay -->
   <div class="overlay"></div>
+
   <!-- Navbar -->
   <header>
     <nav class="navbar">
@@ -29,80 +29,147 @@
         <li><a href="#apply" class="apply-link">Apply</a></li>
       </ul>
 
-          <!-- Hamburg Icon -->
-      <div id="mobile-menu-toggle" class="menu-icon">&#9776;</div>
+      <!-- Hamburg Icon - MEJORADO: Usando <button> para accesibilidad -->
+      <button id="mobile-menu-toggle" class="menu-icon" aria-label="Open menu">☰</button>
 
       <!-- Mobile nav -->
-      <div  id="mobile-menu" class="mobile-menu">
-        <div class="drawer-close" id="drawer-close">&#9776;</div>
+      <div id="mobile-menu" class="mobile-menu">
+        <!-- MEJORADO: Usando <button> para accesibilidad -->
+        <button class="drawer-close" id="drawer-close" aria-label="Close menu">☰</button>
+        <!-- MEJORADO: Orden de enlaces consistente -->
         <ul class="mobile-nav">
+          <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#why-cali">Why Cali?</a></li>
           <li><a href="#quote">Get a Quote</a></li>
           <li><a href="#apply" class="apply-link">Apply</a></li>
-          <li><a href="#home">Home</a></li>
         </ul>
       </div>
       <div id="menu-overlay" class="menu-overlay"></div>
     </nav>
   </header>
-<!-- Hero Section -->
-<main>
-  <section class="hero-banner" id="apply">
-    <div class="hero-wrapper">
-      <div class="hero-left">
-        <h1><span class="spark">✨</span>Welcome to <span class="brand">LumeCare</span><span class="spark">💫</span></h1>
-        <p>World-class aesthetic and medical treatments in Cali, Colombia — expertly crafted for international clients seeking <b>health, beauty, confidence, and rejuvenation.</b></p>
-        <p class="dynamic-line">You can be the next <span id="dynamic-word" aria-live="polite"></span></p>
-      </div>
 
-      <div class="hero-form">
-        <h2>Apply Now</h2>
-        <form id="application-form" novalidate>
-          <label for="first-name" class="visually-hidden">First name*</label>
-          <input type="text" id="first-name" name="first-name" placeholder="First name*" required />
-
-          <label for="last-name" class="visually-hidden">Last name*</label>
-          <input type="text" id="last-name" name="last-name" placeholder="Last name*" required />
-
-          <label for="email" class="visually-hidden">Email*</label>
-          <input type="email" id="email" name="email" placeholder="Email*" required />
-
-          <label for="phone" class="visually-hidden">Phone number</label>
-          <input type="tel" id="phone" name="phone" placeholder="Phone number" inputmode="tel" autocomplete="tel" />
-
-          <label for="treatment">What type of procedure are you interested in?</label>
-          <select id="treatment" name="treatment" required>
-            <option value="">-- Select one --</option>
-            <option value="Oral-Health">Oral Health</option>
-            <option value="Facial-treatment">Facial treatment</option>
-            <option value="Body-Procedures">Body Procedures</option>
-          </select>
-
-          <div id="treatment-details">
-            <label for="details">Describe the procedure you'd like:</label>
-            <textarea id="details" name="details" placeholder="Describe it here..." rows="4" required></textarea>
+  <!-- Hero Section -->
+  <main>
+    <section class="hero-banner" id="apply">
+      <div class="hero-wrapper">
+        <div class="hero-left">
+          <h1><span class="spark">✨</span>Welcome to <span class="brand">LumeCare</span><span class="spark">💫</span></h1>
+          <p>World-class aesthetic and medical treatments in Cali, Colombia — expertly crafted for international clients seeking <b>health, beauty, confidence, and rejuvenation.</b></p>
+          <p class="dynamic-line">You can be the next <span id="dynamic-word" aria-live="polite"></span></p>
+          
+          <div class="procedures-grid">
+            <!-- Tarjeta 1 -->
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="images/breast-real.png" alt="Breast Procedure" />
+                  <h3>Breast</h3>
+                </div>
+                <div class="flip-card-back">
+                  <p>Enhance your natural beauty with breast augmentation tailored to you.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="images/body-real.png" alt="Body Procedure" />
+                  <h3>Body</h3>
+                </div>
+                <div class="flip-card-back">
+                  <p>Reshape and contour your figure for a confident, timeless silhouette.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="images/face-real.png" alt="Face Procedure" />
+                  <h3>Face</h3>
+                </div>
+                <div class="flip-card-back">
+                  <p>Facial procedures that rejuvenate your features and restore harmony.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 4 -->
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="images/skin-real.png" alt="Skin Procedure" />
+                  <h3>Skin</h3>
+                </div>
+                <div class="flip-card-back">
+                  <p>Glowing, even-toned skin treatments designed to bring out your radiance.</p>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <button type="submit">Submit</button>
-        </form>
+        <div class="hero-form">
+          <h2>Apply Now</h2>
+          <form id="application-form" novalidate>
+            <label for="first-name" class="visually-hidden">First name*</label>
+            <input type="text" id="first-name" name="first-name" placeholder="First name*" required />
+
+            <label for="last-name" class="visually-hidden">Last name*</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Last name*" required />
+
+            <label for="email" class="visually-hidden">Email*</label>
+            <input type="email" id="email" name="email" placeholder="Email*" required />
+
+            <label for="phone" class="visually-hidden">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone number" inputmode="tel" autocomplete="tel" />
+
+            <label for="treatment" class="visually-hidden">What type of procedure are you interested in?</label>
+            <select id="treatment" name="treatment" required>
+              <option value="">-- Select a procedure --</option>
+              <option value="Oral-Health">Oral Health</option>
+              <option value="Facial-treatment">Facial treatment</option>
+              <option value="Body-Procedures">Body Procedures</option>
+            </select>
+
+            <div id="treatment-details">
+              <label for="details" class="visually-hidden">Describe the procedure you'd like:</label>
+              <textarea id="details" name="details" placeholder="Describe the procedure you'd like..." rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="social-icons">
+      <!-- MEJORADO: Añadido rel="noopener noreferrer" por seguridad -->
+      <a href="https://www.facebook.com/profile.php?id=61576532674215" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="images/square-facebook-brands.svg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/lumecareofficial/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="images/instagram-brands.svg" alt="Instagram">
+      </a>
     </div>
-  </section>
-</main>
+    <p class="footer-text">© 2025 LumeCare. All rights reserved.</p>
+  </footer>
 
-<footer class="footer">
-  <div class="social-icons">
-    <a href="https://www.facebook.com/profile.php?id=61576532674215" target="_blank" aria-label="Facebook">
-      <img src="images/square-facebook-brands.svg" alt="Facebook">
-    </a>
-    <a href="https://www.instagram.com/lumecareofficial/" target="_blank" aria-label="Instagram">
-      <img src="images/instagram-brands.svg" alt="Instagram">
-    </a>
+  <!-- Modal Structure -->
+  <div class="modal-overlay" id="procedure-modal">
+    <div class="modal-content">
+      <!-- MEJORADO: Usando <button> para accesibilidad -->
+      <button class="modal-close" id="modal-close-btn" aria-label="Close procedure details">×</button>
+      <img src="" alt="Procedure Image" id="modal-image">
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <a href="#application-form" class="modal-apply-btn">Apply for this Procedure</a>
+    </div>
   </div>
-  <p class="footer-text">© 2025 LumeCare. All rights reserved.</p>
-</footer>
 
-<script src="index.js" defer></script>
+  <script src="index.js" defer></script>
 </body>
 </html>

@@ -38,4 +38,20 @@ document.addEventListener("DOMContentLoaded", () => {
       detailsInput.style.display = treatmentSelect.value ? 'block' : 'none';
     });
   }
+
+  // Rotating words with smooth fade
+  const words = ["Empowered", "Radiant", "Serene", "Confident", "Timeless"];
+  let index = 0;
+  const wordSpan = document.getElementById("dynamic-word");
+  wordSpan.textContent = words[0];
+  wordSpan.classList.add("fade-in");
+
+  setInterval(() => {
+    wordSpan.classList.remove("fade-in");
+    // Force reflow to restart the animation
+    void wordSpan.offsetWidth;
+    index = (index + 1) % words.length;
+    wordSpan.textContent = words[index];
+    wordSpan.classList.add("fade-in");
+  }, 2500);
 });

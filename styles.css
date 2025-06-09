@@ -81,7 +81,7 @@ header, section, main,footer {
 /* Hero Section */
 
 
-.hero-wrapper {
+ .hero-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -90,13 +90,27 @@ header, section, main,footer {
   flex-wrap: wrap;
 }
 
+.dynamic-line {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #333;
+}
+
+#dynamic-word {
+  color: var(--primary); /* Dorado suave */
+  font-weight: bold;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
 .hero-left {
   flex: 1;
-  max-width: 600px;
+  max-width: 640px;
 }
 
 .hero-left h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--primary);
   margin-bottom: 1.25rem;
   line-height: 1.2;
@@ -104,23 +118,11 @@ header, section, main,footer {
 
 
 .hero-left p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 1.25rem;
   max-width: 90%;
 }
 
-.benefits {
-  list-style: none;
-  margin-top: 1.25rem;
-}
-
-.benefits li {
-  margin-bottom: 0.625rem;
-  font-size: 1rem;
-  color: var(--primary-dark);
-  display: flex;
-  align-items: center;
-}
 
 /* Form Card */
 

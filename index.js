@@ -16,21 +16,19 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = "auto";
   }
 
-  // Abrir menú
   menuIcon?.addEventListener("click", openMenu);
 
-  // Cerrar menú desde ícono interno
+
   drawerClose?.addEventListener("click", closeMenu);
 
-  // Cerrar al hacer clic fuera (overlay)
   overlay?.addEventListener("click", closeMenu);
 
-  // Cerrar al hacer clic en un enlace del menú
+
   document.querySelectorAll(".mobile-nav a").forEach(link => {
     link.addEventListener("click", closeMenu);
   });
 
-  // Opcional: tratamiento
+
   const treatmentSelect = document.getElementById('treatment');
   const detailsInput = document.getElementById('treatment-details');
   if (treatmentSelect && detailsInput) {
@@ -54,4 +52,65 @@ document.addEventListener("DOMContentLoaded", () => {
     wordSpan.textContent = words[index];
     wordSpan.classList.add("fade-in");
   }, 2500);
+
+  // --- Modal Interaction Logic ---
+
+
+  const flipCards = document.querySelectorAll('.flip-card');
+  const modalOverlay = document.getElementById('procedure-modal');
+  const modalCloseBtn = document.getElementById('modal-close-btn');
+  const modalImage = document.getElementById('modal-image');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDescription = document.getElementById('modal-description');
+  const modalApplyBtn = document.querySelector('.modal-apply-btn');
+
+
+  const openModal = (card) => {
+
+    const imageSrc = card.querySelector('.flip-card-front img').src;
+    const titleText = card.querySelector('.flip-card-front h3').textContent;
+    const descriptionText = card.querySelector('.flip-card-back p').textContent;
+
+
+    modalImage.src = imageSrc;
+    modalTitle.textContent = titleText;
+    modalDescription.textContent = descriptionText;
+
+
+    modalOverlay.classList.add('active');
+    document.body.classList.add('modal-open'); 
+  };
+
+
+  const closeModal = () => {
+    modalOverlay.classList.remove('active');
+    document.body.classList.remove('modal-open'); 
+  };
+
+
+  flipCards.forEach(card => {
+    card.addEventListener('click', () => {
+      openModal(card);
+    });
+  });
+
+
+  modalCloseBtn.addEventListener('click', closeModal);
+  
+
+  modalOverlay.addEventListener('click', (event) => {
+    if (event.target === modalOverlay) {
+      closeModal();
+    }
+  });
+
+
+  modalApplyBtn.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modalOverlay.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
 });

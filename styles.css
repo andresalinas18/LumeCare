@@ -10,6 +10,7 @@
   --accent: #EFD8C5;
   --text-primary: #333333;
   --text-secondary: #6c757d;
+  --accent-cta: #D4B07F;
   --white: #fff;
  /*family-fonts*/
   --font-heading: 'Libre Baskerville', serif;
@@ -30,6 +31,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, .logo-text {
   font-family: var(--font-heading);
+  color: var(--text-primary);
 }
 
 .overlay {
@@ -69,13 +71,13 @@ header, section, main,footer {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--text-secondary);
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: var(--primary-dark);
+.nav-links a:hover, .nav-links a.active {
+  color: var(--accent-cta);
 }
 
 /* Hero Section */
@@ -111,7 +113,7 @@ header, section, main,footer {
 
 .hero-left h1 {
   font-size: 2.5rem;
-  color: var(--primary);
+  color: var(--text-primary);
   margin-bottom: 1.25rem;
   line-height: 1.2;
 }

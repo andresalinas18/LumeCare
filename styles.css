@@ -23,9 +23,8 @@
 
 body {
   font-family: var(--font-body);
-  color: var(--text);
-  background: url('images/background.jpg') no-repeat center center fixed;
-  background-size: cover;
+  color: var(--text-primary); 
+  background-color: var(--background-light); 
 }
 
 h1, h2, h3, h4, h5, h6, .logo-text {
@@ -222,7 +221,7 @@ header, section, main,footer {
 }
 
 .modal-content {
-  background: var(--background-light);
+  background: var(--white);
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);

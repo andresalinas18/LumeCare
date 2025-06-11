@@ -1,19 +1,22 @@
 /* =======================
    Root Variables & Reset
 ========================== */
+
 :root {
-  /*Colors*/
-  --primary: #D4B07F;
-  --primary-dark: #9DB5A3;
-  --background-light: #FDFCFB;
-  --border-color: #C5C9C3;
-  --accent: #EFD8C5;
-  --text-primary: #333333;
-  --text-secondary: #6c757d;
-  --accent-cta: #D4B07F;
-  --white: #fff;
- /*family-fonts*/
-  --font-heading: 'Libre Baskerville', serif;
+  /* palette "Serene Glow" */
+  --color-primary: #C9A475;      
+  --color-primary-dark: #B58E5E;  
+  --color-text: #2E2E2E;            
+  --color-background: #FDFCFB;      
+  --color-grey-light: #A9A9A9;      
+  --color-white: #FFFFFF;           
+
+  /* secundary accent */
+  --color-accent-rose: #D8A9AD;
+  --color-accent-sage: #9DB5A3;
+
+  /* fonts */
+  --font-headings: 'Lora', serif;
   --font-body: 'Lato', sans-serif;
 }
 
@@ -24,15 +27,19 @@
 }
 
 body {
-  font-family: var(--font-body);
-  color: var(--text-primary); 
-  background-color: var(--background-light); 
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-weight: 400;
+    line-height: 1.65;
 }
 
-h1, h2, h3, h4, h5, h6, .logo-text {
-  font-family: var(--font-heading);
-  color: var(--text-primary);
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
+    color: var(--color-text);
+    font-weight: 600;
 }
+
 
 .overlay {
   position: fixed;
@@ -71,13 +78,13 @@ header, section, main,footer {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--text-secondary);
+  color: var(--color-tex);
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover, .nav-links a.active {
-  color: var(--accent-cta);
+  color: var(--color-primary);
 }
 
 /* Hero Section */
@@ -96,11 +103,11 @@ header, section, main,footer {
   font-size: 1.5rem;
   font-weight: 500;
   margin-top: 10px;
-  color: #333;
+  color: var(--color-text);
 }
 
 #dynamic-word {
-  color: var(--primary); 
+  color: var(--color-primary); 
   font-weight: bold;
   transition: opacity 0.5s ease-in-out;
 }
@@ -113,7 +120,7 @@ header, section, main,footer {
 
 .hero-left h1 {
   font-size: 2.5rem;
-  color: var(--text-primary);
+  color: var(--color-text);
   margin-bottom: 1.25rem;
   line-height: 1.2;
 }
@@ -162,7 +169,7 @@ header, section, main,footer {
 }
 
 .flip-card-front {
-  background: #fff;
+  background: var(--color-white);
   width: 100%;
   height: 100%;
   display: flex;
@@ -185,7 +192,7 @@ header, section, main,footer {
 
 .flip-card-front h3 {
   font-size: 1rem;   
-  color: #b89f70;
+  color: var(--color-primary);
   margin-top: 0;      
   text-align: center;
 }
@@ -224,7 +231,7 @@ header, section, main,footer {
 }
 
 .modal-content {
-  background: var(--white);
+  background: var(--color-white);
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -245,14 +252,14 @@ header, section, main,footer {
   top: 10px;
   right: 20px;
   font-size: 2.5rem;
-  color: #888;
+  color: var(--color-grey-light);
   cursor: pointer;
   line-height: 1;
   transition: color 0.2s ease;
 }
 
 .modal-close:hover {
-  color: var(--text);
+  color: var(--color-text);
 }
 
 #modal-image {
@@ -260,27 +267,27 @@ header, section, main,footer {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--primary);
+  border: 4px solid var(--color-primary);
   margin-bottom: 1rem;
 }
 
 #modal-title {
   font-size: 2rem;
-  color: var(--primary);
+  color: var(--color-primary);
   margin-bottom: 0.5rem;
 }
 
 #modal-description {
   font-size: 1.1rem;
-  color: var(--text);
+  color: var(--color-text);
   line-height: 1.6;
   margin-bottom: 2rem;
 }
 
 .modal-apply-btn {
   display: inline-block;
-  background: var(--primary);
-  color: var(--white);
+  background: var(--color-primary);
+  color: var(--color-white);
   font-weight: bold;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
@@ -289,7 +296,7 @@ header, section, main,footer {
 }
 
 .modal-apply-btn:hover {
-  background: var(--primary-dark);
+  background: var(--color-primary-dark);
 }
 
 
@@ -302,17 +309,17 @@ body.modal-open {
 .hero-form {
   flex: 1;
   max-width: 400px;
-  background: var(--white);
+  background: var(--color-white);
   border-radius: 0.75rem;
   padding: 2rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  border: 2px solid var(--accent);
+  border: 2px solid var(--color-grey-light);
 }
 
 .hero-form h2 {
   margin-bottom: 1.25rem;
   font-size: 1.5rem;
-  color: var(--primary);
+  color: var(--color-primary);
 }
 
 .hero-form form {
@@ -329,19 +336,19 @@ body.modal-open {
   padding: 0.75rem;
   border-radius: 0.5rem;
   font-size: 1rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--color-grey-light);
 }
 
 .hero-form input,
 .hero-form select,
 .hero-form textarea {
-  background: var(--background-light);
-  color: #3A3A3A;
+  background: var(--color-white);
+  color: var(--color-text);
 }
 
 .hero-form button {
-  background: var(--primary);
-  color: var(--white);
+  background: var(--color-primary);
+  color: var(--color-white);
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -349,7 +356,7 @@ body.modal-open {
 }
 
 .hero-form button:hover {
-  background: #9DB5A3;
+  background: var(--color-primary-dark);
 }
 
 #treatment-details {
@@ -397,7 +404,7 @@ footer {
 }
 
 .footer-text {
-  color: #555; 
+  color: var(--color-grey-light); 
   font-size: 0.9rem;
   font-family: var(--font-body);
 }
@@ -412,7 +419,7 @@ footer {
   right: 0;
   width: 60vw;
   height: 100vh;
-  background: var(--background-light);
+  background: var(--color-white);
   z-index: 9999;
   padding: 3.75rem 2.5rem;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
@@ -433,7 +440,7 @@ footer {
 
 .mobile-nav a {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--color-primary);
   font-weight: 600;
   font-size: 1.2rem;
   text-align: left;
@@ -442,7 +449,7 @@ footer {
 .menu-icon {
   display: none;
   font-size: 2rem;
-  color: var(--primary);
+  color: var(--color-primary);
   cursor: pointer;
 }
 
@@ -469,7 +476,7 @@ footer {
 
 .drawer-close {
   font-size: 2rem;
-  color: var(--primary);
+  color: var(--color-primary);
   align-self: flex-end;
   cursor: pointer;
   margin-bottom: 1.25rem;
@@ -526,7 +533,7 @@ footer {
 
   .hero-left p:nth-of-type(2) {
     font-style: italic;
-    color: #7a6c5d; 
+    color: var(--color-grey-light); 
   }
 
   .hero-left ul.benefits {
@@ -538,7 +545,7 @@ footer {
   .hero-left ul.benefits li {
     font-size: 1rem;
     margin-bottom: 0.6rem;
-    color: #4b5d56; 
+    color: var(--color-accent-sage); 
     font-weight: 500;
   }
 

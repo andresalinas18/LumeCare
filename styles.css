@@ -691,46 +691,48 @@ footer {
   .hero-cta-button { padding: 14px 32px; }
 }
 
+/*procedures section*/
+
 .procedures-section {
-  padding: 120px 20px; /* MUY IMPORTANTE: 120px de espacio arriba y abajo para que la sección respire. */
-  background-color: var(--color-white); /* Fondo blanco puro para que contraste con el hero. */
+  padding: 120px 20px; 
+  background-color: var(--color-white); 
 }
 
-/* Un contenedor para centrar el contenido y limitar su ancho */
+
 .section-container {
   max-width: 1200px;
-  margin: 0 auto; /* Centra el contenedor */
+  margin: 0 auto; 
   text-align: center;
 }
 
-/* Estilo para los títulos de sección */
+
 .section-title {
-  font-family: var(--font-headings); /* Lora */
+  font-family: var(--font-headings); 
   font-size: 2.8rem;
   color: var(--color-text);
   margin-bottom: 1rem;
 }
 
-/* Estilo para los subtítulos de sección */
+
 .section-subtitle {
-  font-family: var(--font-body); /* Lato */
+  font-family: var(--font-body); 
   font-size: 1.1rem;
   color: var(--color-text);
-  opacity: 0.8; /* Un poco más suave que el texto normal */
-  max-width: 700px; /* Evita que sea demasiado ancho */
-  margin: 0 auto 4rem auto; /* Centra y da un buen espacio antes de las tarjetas */
+  opacity: 0.8; 
+  max-width: 700px; 
+  margin: 0 auto 4rem auto; 
 }
 
-/* Ajustes para tu grid existente para que funcione mejor en este nuevo contexto */
+
 .procedures-grid {
-  gap: 2rem; /* Aumentamos el espacio entre las tarjetas */
-  justify-content: center; /* Nos aseguramos de que esté centrado */
+  gap: 2rem; 
+  justify-content: center; 
 }
 
 /* Ajustes responsive */
 @media (max-width: 768px) {
   .procedures-section {
-    padding: 80px 20px; /* Reducimos el espaciado en móviles */
+    padding: 80px 20px; 
   }
 
   .section-title {

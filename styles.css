@@ -586,3 +586,110 @@ footer {
     font-size: 0.95rem;
   }
 }
+
+/* 1. El Contenedor Principal - Ocupa toda la pantalla (igual que antes) */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000; /* Un color de fondo por si todo falla */
+}
+
+/* 2. El Contenedor del Vídeo */
+.hero-video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* 3. El Vídeo en sí */
+.hero-video {
+  width: 100%;
+  height: 100%;
+  /* Esta es la propiedad mágica que hace que el vídeo cubra todo el espacio sin deformarse */
+  object-fit: cover; 
+}
+
+/* 4. El Overlay y Contenido (exactamente igual que antes) */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 46, 46, 0.45); /* Un gris oscuro con 45% opacidad */
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: var(--color-white);
+  padding: 0 20px;
+}
+
+.hero-headline {
+  font-family: var(--font-headings);
+  font-size: 4.5rem;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-subheadline {
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  max-width: 650px;
+  margin: 0 auto 2rem auto;
+  opacity: 0.9;
+}
+
+.hero-cta-button {
+  display: inline-block;
+  padding: 16px 38px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-cta-button:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- FALLBACK PARA MÓVILES --- */
+@media (max-width: 768px) {
+  /* Ocultamos el vídeo en pantallas de 768px o menos */
+  .hero-video-wrapper {
+    display: none;
+  }
+  
+  /* Usamos la imagen del 'poster' como fondo de la sección */
+  .hero-section {
+    background-image: url('images/Cali-fallback.png'); /* ¡LA MISMA IMAGEN QUE EN EL POSTER! */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-headline { font-size: 2.8rem; }
+  .hero-subheadline { font-size: 1.1rem; }
+  .hero-cta-button { padding: 14px 32px; }
+}

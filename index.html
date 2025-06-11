@@ -14,9 +14,9 @@
     <link rel="manifest" href="site.webmanifest" />
     <!-- FAVICON CODE END -->
     <link rel="stylesheet" href="styles.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@500;600&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -58,100 +58,38 @@
   </header>
 
   <!-- Hero Section -->
-  <main>
-    <section class="hero-banner" id="apply">
-      <div class="hero-wrapper">
-        <div class="hero-left">
-          <h1>Welcome to <span class="brand">LumeCare</span></h1>
-          <p>World-class aesthetic and medical treatments in Cali, Colombia — expertly crafted for international clients seeking <b>health, beauty, confidence, and rejuvenation.</b></p>
-          <p class="dynamic-line">You can be the next <span id="dynamic-word" aria-live="polite"></span></p>
-          
-          <div class="procedures-grid">
-            <!-- card 1 -->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="images/breast-real.png" alt="Breast Procedure" />
-                  <h3>Breast</h3>
-                </div>
-                <div class="flip-card-back">
-                  <p>Enhance your natural beauty with breast augmentation tailored to you.</p>
-                </div>
-              </div>
-            </div>
-            <!-- card 2 -->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="images/body-real.png" alt="Body Procedure" />
-                  <h3>Body</h3>
-                </div>
-                <div class="flip-card-back">
-                  <p>Reshape and contour your figure for a confident, timeless silhouette.</p>
-                </div>
-              </div>
-            </div>
-            <!-- card 3 -->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="images/face-real.png" alt="Face Procedure" />
-                  <h3>Face</h3>
-                </div>
-                <div class="flip-card-back">
-                  <p>Facial procedures that rejuvenate your features and restore harmony.</p>
-                </div>
-              </div>
-            </div>
-            <!-- card 4 -->
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="images/skin-real.png" alt="Skin Procedure" />
-                  <h3>Skin</h3>
-                </div>
-                <div class="flip-card-back">
-                  <p>Glowing, even-toned skin treatments designed to bring out your radiance.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+<main>
+  <section class="hero-section">
+    <!-- Contenedor para el vídeo de fondo -->
+    <div class="hero-video-wrapper">
+      <video
+        class="hero-video"
+        autoplay
+        loop
+        muted
+        playsinline
+        poster="images/Cali-fallback.png"
+      >
 
-        <div class="hero-form">
-          <h2>Apply Now</h2>
-          <form id="application-form" novalidate>
-            <label for="first-name" class="visually-hidden">First name*</label>
-            <input type="text" id="first-name" name="first-name" placeholder="First name*" required />
+        <!-- video-->
+        <source src="videos/Cali.mp4" type="video/mp4">
 
-            <label for="last-name" class="visually-hidden">Last name*</label>
-            <input type="text" id="last-name" name="last-name" placeholder="Last name*" required />
+        <source src="videoss/Cali.webm" type="video/webm"> 
+      </video>
+    </div>
+    <!-- dark overlay-->
+    <div class="hero-overlay"></div>
 
-            <label for="email" class="visually-hidden">Email*</label>
-            <input type="email" id="email" name="email" placeholder="Email*" required />
+    <div class="hero-content">
+      <h1 class="hero-headline">The Art of Transformation</h1>
+      <p class="hero-subheadline">Your journey to confidence and radiance, guided by Colombia's finest medical artists.</p>
+      <a href="#procedures" class="hero-cta-button">Explore Our Procedures</a>
+    </div>
+  </section>
 
-            <label for="phone" class="visually-hidden">Phone number</label>
-            <input type="tel" id="phone" name="phone" placeholder="Phone number" inputmode="tel" autocomplete="tel" />
-
-            <label for="treatment" class="visually-hidden">What type of procedure are you interested in?</label>
-            <select id="treatment" name="treatment" required>
-              <option value="">-- Select a procedure --</option>
-              <option value="Oral-Health">Oral Health</option>
-              <option value="Facial-treatment">Facial treatment</option>
-              <option value="Body-Procedures">Body Procedures</option>
-            </select>
-
-            <div id="treatment-details">
-              <label for="details" class="visually-hidden">Describe the procedure you'd like:</label>
-              <textarea id="details" name="details" placeholder="Describe the procedure you'd like..." rows="4" required></textarea>
-            </div>
-
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
+  <!-- other sections -->
+  
+</main>
 
   <footer class="footer">
     <div class="social-icons">

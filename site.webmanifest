@@ -1,0 +1,21 @@
+{
+  "name": "LumeCare | Aesthetic & Medical Travel",
+  "short_name": "LumeCare",
+  "description": "World-class aesthetic and medical treatments in Cali, Colombia.",
+  "start_url": "/LumeCare/index.html",
+  "display": "standalone",
+  "background_color": "#FDFCFB",
+  "theme_color": "#C9A475",
+  "icons": [
+    {
+      "src": "images/icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

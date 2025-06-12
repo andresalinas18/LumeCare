@@ -92,6 +92,11 @@ h1, h2, h3, h4, h5, h6 {
 .logo img {
   max-height: 8rem; 
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.logo a:hover img {
+  transform: scale(1.05);
 }
 
 .nav-content {

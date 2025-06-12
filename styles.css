@@ -57,29 +57,44 @@ h1, h2, h3, h4, h5, h6 {
    1. HEADER & NAVIGATION
    ========================================================================== */
 
+
 .header {
-  position: absolute; /* Sits on top of the hero section */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10; /* Ensures it's above hero content but below the modal */
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  z-index: 100;
+  border-radius: 8px;
+  background-color: var(--color-white);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
+  position: relative; 
   display: flex;
   align-items: center;
-  justify-content: space-between; 
-  padding: 1rem 2.5rem;
-  width: 100%;
+  justify-content: flex-end;  
+  padding-left: 12rem; 
+  height: 80px; 
+  padding-right: 2rem;
+}
+
+.logo {
+  position: absolute;
+  left: 1.5rem; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  z-index: 10; 
 }
 
 .logo img {
-  max-height: 8rem; /* Slightly reduced for better balance */
-  height: auto;
-  width: auto;
+  max-height: 8rem; 
+  display: block;
 }
 
-/* Main navigation list - shared between desktop and mobile */
 .nav-links {
   display: flex;
   align-items: center;
@@ -89,11 +104,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--color-white); /* White text for contrast against hero video */
+  color: var(--color-text); /* Changed back to dark text for contrast on the light-blurry background */
   font-weight: 600;
   font-size: 1rem;
   transition: color 0.3s ease;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Shadow for readability */
 }
 
 .nav-links a:hover,
@@ -103,14 +117,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Mobile menu hamburger button */
 .menu-icon {
-  display: none; /* Hidden on desktop */
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
   font-size: 2.5rem;
-  color: var(--color-white);
-  z-index: 10000; /* Stays on top of everything */
+  color: var(--color-text); /* Changed back to dark text */
+  z-index: 10000;
 }
+
 
 /* ==========================================================================
    2. HERO SECTION

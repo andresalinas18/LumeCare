@@ -434,100 +434,114 @@ h1, h2, h3, h4, h5, h6 {
    4A. ABOUT US SECTION
    ========================================================================== */
 
-.about-section {
+/* Main container for the new design */
+.about-section-unified {
+  background-image: url('images/aboutUsFallback.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   padding: 120px 20px;
-  background-color: var(--color-white); /* A clean white background to stand out */
 }
 
-.about-intro {
-  font-size: 1.2rem;
+.unified-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- PART 1: THE MANIFESTO --- */
+
+.manifesto-wrapper {
+  text-align: center;
+  margin-bottom: 5rem; 
+}
+
+.manifesto-headline {
+  font-family: var(--font-headings);
+  font-size: 4rem; 
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--color-text); 
+  text-shadow: 0px 2px 15px rgba(255, 255, 255, 0.5);
+}
+
+.manifesto-headline span {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.main-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.value-carousel-container {
+  height: 550px;
+  display: flex;
+  gap: 1rem;
+}
+
+.value-carousel-card {
+  position: relative; flex: 1; height: 100%; border-radius: 20px;
+  overflow: hidden; cursor: pointer; background-size: cover; background-position: center;
+  transition: flex 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); 
+}
+
+.value-carousel-card.active { flex: 5; }
+
+.card-content {
+  position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem 2rem;
+  color: white;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+}
+
+/* --- PART 2 & 3 CONTAINER --- */
+
+.about-text-content .about-intro {
+  font-size: 1.5rem;
   font-family: var(--font-headings);
   font-style: italic;
-  font-weight: 500;
   line-height: 1.6;
-  max-width: 800px;
-  margin: 1rem auto 4rem auto;
-  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+}
+
+.about-text-content .about-mission {
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--color-primary);
+}
+
+.about-text-content .about-mission h3 {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.about-text-content .about-mission p {
   color: var(--color-text);
   opacity: 0.9;
 }
 
-.about-mission {
-  max-width: 750px;
-  margin: 0 auto 5rem auto;
-  text-align: center;
-  background-color: var(--color-background); /* Subtle background color */
-  padding: 2rem;
-  border-radius: 8px;
-  border: 1px solid #f0ebe5;
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+  .main-content-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
 }
 
-.about-mission h3 {
-  font-size: 1.8rem;
-  color: var(--color-primary);
-  margin-bottom: 1rem;
-}
-
-.values-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.values-title {
-  font-size: 2rem;
-  margin-bottom: 3rem;
-  color: var(--color-text);
-}
-
-.values-grid {
-  display: grid;
-  /* Creates a responsive grid: 4 columns on desktop, 2 on tablet, 1 on mobile */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2.5rem;
-}
-
-.value-card {
-  text-align: center;
-}
-
-.value-card i {
-  font-size: 2.5rem;
-  color: var(--color-primary);
-  margin-bottom: 1rem;
-  display: block; /* Ensures the icon is on its own line */
-}
-
-.value-card h4 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: var(--color-text);
-}
-
-.value-card p {
-  font-size: 1rem;
-  line-height: 1.6;
-  opacity: 0.8;
-}
-
-/* Responsive adjustments for About Us section */
 @media (max-width: 768px) {
-  .about-section {
-    padding: 80px 20px;
+  .manifesto-headline { font-size: 2.8rem; }
+  .about-section-unified { padding: 80px 20px; }
+  .value-carousel-container {
+    display: flex; overflow-x: auto; height: 400px;
+    /* ... (Estilos del scrollbar se quedan igual) ... */
   }
-  .about-intro {
-    font-size: 1.1rem;
-  }
-  .about-mission h3 {
-    font-size: 1.5rem;
-  }
-  .values-title {
-    font-size: 1.8rem;
-  }
-  .values-grid {
-    gap: 2rem;
-  }
+  .value-carousel-card,
+  .value-carousel-card.active { flex: 0 0 80%; }
 }
 
 /* ==========================================================================

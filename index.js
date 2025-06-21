@@ -97,32 +97,57 @@ document.addEventListener("DOMContentLoaded", () => {
    * Manages the interactive card carousel in the "About Us" section.
    * =================================================================
    */
-   const initValueCarousel = () => {
+  const initValueCarousel = () => {
+    const container = document.querySelector('.value-carousel-container');
     const valueCarouselCards = document.querySelectorAll('.value-carousel-card');
 
-    if (valueCarouselCards.length > 0) {
-
-      const activateCard = (cardToActivate) => {
-        if (cardToActivate.classList.contains('active')) return;
-
-        const currentActiveCard = document.querySelector('.value-carousel-card.active');
-        if (currentActiveCard) {
-          currentActiveCard.classList.remove('active');
-        }
-        cardToActivate.classList.add('active');
-      };
-
-      valueCarouselCards.forEach(card => {
-        card.addEventListener('click', () => activateCard(card));
-        card.addEventListener('mouseover', () => {
-          if (window.innerWidth > 768) {
-            activateCard(card);
-          }
-        });
-      });
+    // Solo ejecuta el código si encuentra los elementos necesarios
+    if (!container || valueCarouselCards.length === 0) {
+      return;
     }
-  };
 
+    // Función que activa una tarjeta específica
+    const activateCard = (cardToActivate) => {
+      // Si ya está activa, no hacemos nada para evitar trabajo innecesario
+      if (cardToActivate.classList.contains('active')) return;
+
+      // Desactiva la que estuviera activa
+      const currentActiveCard = container.querySelector('.value-carousel-card.active');
+      if (currentActiveCard) {
+        currentActiveCard.classList.remove('active');
+      }
+      
+      // Activa la nueva tarjeta
+      cardToActivate.classList.add('active');
+    };
+
+    // Función que vuelve al estado por defecto (la primera tarjeta activa)
+    const resetToDefault = () => {
+      const firstCard = container.querySelector('.card-1');
+      if (firstCard) {
+        activateCard(firstCard);
+      }
+    };
+
+    // Añadimos el evento a cada tarjeta
+    valueCarouselCards.forEach(card => {
+      // Cuando el ratón entra en una tarjeta, esa tarjeta se activa
+      card.addEventListener('mouseover', () => {
+        // Solo en escritorio
+        if (window.innerWidth > 768) {
+          activateCard(card);
+        }
+      });
+    });
+
+    // Cuando el ratón sale del CONTENEDOR COMPLETO, vuelve al estado inicial
+    container.addEventListener('mouseleave', () => {
+      // Solo en escritorio
+      if (window.innerWidth > 768) {
+        resetToDefault();
+      }
+    });
+  };
 
   
   // --- Initialize all functionalities ---

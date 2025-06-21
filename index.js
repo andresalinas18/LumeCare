@@ -33,52 +33,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  /**
-   * =================================================================
-   * DYNAMIC WORD ANIMATION
-   * Rotates a series of words in the hero section.
-   * =================================================================
-   */
-  const initDynamicWords = () => {
-    const wordSpan = document.getElementById("dynamic-word");
-    if (!wordSpan) return; // Exit if the element doesn't exist
-
-    const words = ["Empowered", "Radiant", "Serene", "Confident", "Timeless"];
-    let currentIndex = 0;
-
-    // Set initial state
-    wordSpan.textContent = words[currentIndex];
-    wordSpan.style.opacity = 1;
-
-    setInterval(() => {
-      wordSpan.style.opacity = 0; // Fade out
-
-      // Wait for the fade-out transition to complete
-      setTimeout(() => {
-        currentIndex = (currentIndex + 1) % words.length;
-        wordSpan.textContent = words[currentIndex];
-        wordSpan.style.opacity = 1; // Fade in
-      }, 500); // This should match the CSS transition duration
-    }, 2500);
-  };
-
-  /**
+  /*
    * =================================================================
    * PROCEDURE MODAL
    * Handles opening and closing the details modal for procedure cards.
    * =================================================================
    */
+
   const initProcedureModal = () => {
     const flipCards = document.querySelectorAll('.flip-card');
     const modalOverlay = document.getElementById('procedure-modal');
 
     // Exit if essential modal elements are missing
     if (!modalOverlay || flipCards.length === 0) {
-      console.warn("Modal or flip cards not found, modal logic skipped.");
       return;
     }
     
-    const modalContent = modalOverlay.querySelector('.modal-content');
+
     const modalCloseBtn = document.getElementById('modal-close-btn');
     const modalImage = document.getElementById('modal-image');
     const modalTitle = document.getElementById('modal-title');
@@ -94,12 +65,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (descriptionText) modalDescription.textContent = descriptionText;
       
       modalOverlay.classList.add('active');
-      document.body.classList.add('modal-open');
+      document.body.style.overflow = 'hidden'; 
     };
 
     const closeModal = () => {
       modalOverlay.classList.remove('active');
-      document.body.classList.remove('modal-open');
+      document.body.style.overflow = '';
     };
 
     // Event Listeners
@@ -120,10 +91,43 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   };
+/**
+   * =================================================================
+   * VALUE CAROUSEL
+   * Manages the interactive card carousel in the "About Us" section.
+   * =================================================================
+   */
+   const initValueCarousel = () => {
+    const valueCarouselCards = document.querySelectorAll('.value-carousel-card');
+
+    if (valueCarouselCards.length > 0) {
+
+      const activateCard = (cardToActivate) => {
+        if (cardToActivate.classList.contains('active')) return;
+
+        const currentActiveCard = document.querySelector('.value-carousel-card.active');
+        if (currentActiveCard) {
+          currentActiveCard.classList.remove('active');
+        }
+        cardToActivate.classList.add('active');
+      };
+
+      valueCarouselCards.forEach(card => {
+        card.addEventListener('click', () => activateCard(card));
+        card.addEventListener('mouseover', () => {
+          if (window.innerWidth > 768) {
+            activateCard(card);
+          }
+        });
+      });
+    }
+  };
+
+
   
   // --- Initialize all functionalities ---
   initMobileNav();
-  initDynamicWords();
   initProcedureModal();
+  initValueCarousel();
 
 });

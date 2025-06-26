@@ -485,18 +485,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .value-carousel-card {
+  position: relative;
   flex: 1;
+  height: 100%;
   border-radius: 20px;
   overflow: hidden;
+  cursor: default;
   background-size: cover;
   background-position: center;
-  cursor: pointer;
-  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transform: translateZ(0);
+  will-change: flex; 
   filter: grayscale(100%);
-  transition: all 250ms ease;
-  will-change: flex;
+  transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+              filter 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
-
 
 .value-carousel-card.active {
   flex: 5;
@@ -507,29 +510,56 @@ h1, h2, h3, h4, h5, h6 {
 .card-content {
   position: absolute;
   bottom: 0;
-  width: 100%;
-  padding: 1.2rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
   color: white;
-  pointer-events: none;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  text-align: left;
+  transition: align-items 0.6s ease;
 }
 
 .card-content h4 {
-  opacity: 1;
   color: var(--color-white);
-  transition: transform 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;
 }
 
 .card-content p {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: opacity 0.3s ease, max-height 0.3s ease;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;
+}
+
+
+
+.value-carousel-card.active .card-content h4,
+.value-carousel-card.active .card-content p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.value-carousel-card.active .card-content h4 {
+  max-height: 100px;
+  overflow: visible;
+  transition: opacity 0.6s ease-out 0.6s,
+              transform 0.6s ease-out 0.6s,
+              max-height 0.6s ease-out 0.6s;
 }
 
 .value-carousel-card.active .card-content p {
-  opacity: 1;
-  max-height: 200px; 
+  max-height: 200px;
   transition: opacity 0.6s ease-out 0.6s, 
               max-height 0.6s ease-out 0.6s, 
               transform 0.6s ease-out 0.6s;
@@ -571,30 +601,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
-  .manifesto-headline {
-    font-size: 2.8rem;
-  }
-
-  .about-section-unified {
-    padding: 80px 20px;
-  }
-
+  .manifesto-headline { font-size: 2.8rem; }
+  .about-section-unified { padding: 80px 20px; }
   .value-carousel-container {
-    flex-direction: column;
-    height: auto;
+    display: flex; overflow-x: auto; height: 400px;
+    /* ... (Estilos del scrollbar se quedan igual) ... */
   }
-
   .value-carousel-card,
-  .value-carousel-card.active {
-    flex: auto;
-    height: 300px;
-  }
-
-  .card-content p {
-    opacity: 1;
-    max-height: 100%;
-    transform: none;
-  }
+  .value-carousel-card.active { flex: 0 0 80%; }
 }
 
 

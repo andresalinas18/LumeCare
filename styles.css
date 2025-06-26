@@ -485,21 +485,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .value-carousel-card {
-  position: relative;
   flex: 1;
-  height: 100%;
   border-radius: 20px;
   overflow: hidden;
-  cursor: default;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-  transform: translateZ(0);
-  will-change: flex; 
+  cursor: pointer;
+  position: relative;
   filter: grayscale(100%);
-  transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1),
-              filter 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all 250ms ease;
+  will-change: flex;
 }
+
 
 .value-carousel-card.active {
   flex: 5;
@@ -507,24 +504,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* --- 2. Contenido de la Tarjeta --- */
 .card-content {
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1.5rem 2rem;
+  width: 100%;
+  padding: 1.2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
   color: white;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
-  
-  /* Usamos Flexbox para alinear el contenido DENTRO de la tarjeta */
-  display: flex;
-  flex-direction: column; /* Apila el título y el párrafo */
-  
-  /* Por defecto, alineamos para el estado ACTIVO */
-  align-items: flex-start;
-  text-align: left;
-  transition: align-items 0.6s ease;
+  pointer-events: none;
 }
 
 .card-content h4 {
@@ -533,23 +520,16 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.4s ease;
 }
 
-
-/* --- 3. El Párrafo y su Animación SECUENCIAL --- */
 .card-content p {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  margin-top: 0.5rem;
-  line-height: 1.6;
-  font-size: 0.95rem;
-  transform: translateY(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
 }
 
 .value-carousel-card.active .card-content p {
   opacity: 1;
-  max-height: 200px;
-  transform: translateY(0);
+  max-height: 200px; 
   transition: opacity 0.6s ease-out 0.6s, 
               max-height 0.6s ease-out 0.6s, 
               transform 0.6s ease-out 0.6s;
@@ -591,15 +571,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
-  .manifesto-headline { font-size: 2.8rem; }
-  .about-section-unified { padding: 80px 20px; }
-  .value-carousel-container {
-    display: flex; overflow-x: auto; height: 400px;
-    /* ... (Estilos del scrollbar se quedan igual) ... */
+  .manifesto-headline {
+    font-size: 2.8rem;
   }
+
+  .about-section-unified {
+    padding: 80px 20px;
+  }
+
+  .value-carousel-container {
+    flex-direction: column;
+    height: auto;
+  }
+
   .value-carousel-card,
-  .value-carousel-card.active { flex: 0 0 80%; }
+  .value-carousel-card.active {
+    flex: auto;
+    height: 300px;
+  }
+
+  .card-content p {
+    opacity: 1;
+    max-height: 100%;
+    transform: none;
+  }
 }
+
+
+/* ======================= WHY CALI ======================= */
 
 /* ==========================================================================
    5. FOOTER

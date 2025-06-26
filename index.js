@@ -98,56 +98,35 @@ document.addEventListener("DOMContentLoaded", () => {
    * =================================================================
    */
   const initValueCarousel = () => {
-    const container = document.querySelector('.value-carousel-container');
-    const valueCarouselCards = document.querySelectorAll('.value-carousel-card');
+  const container = document.querySelector('.value-carousel-container');
+  const cards = document.querySelectorAll('.value-carousel-card');
+  let activeCard = cards[0];
+  let hoverTimeout;
 
-    // Solo ejecuta el código si encuentra los elementos necesarios
-    if (!container || valueCarouselCards.length === 0) {
-      return;
-    }
+  activeCard.classList.add('active');
 
-    // Función que activa una tarjeta específica
-    const activateCard = (cardToActivate) => {
-      // Si ya está activa, no hacemos nada para evitar trabajo innecesario
-      if (cardToActivate.classList.contains('active')) return;
-
-      // Desactiva la que estuviera activa
-      const currentActiveCard = container.querySelector('.value-carousel-card.active');
-      if (currentActiveCard) {
-        currentActiveCard.classList.remove('active');
-      }
-      
-      // Activa la nueva tarjeta
-      cardToActivate.classList.add('active');
-    };
-
-    // Función que vuelve al estado por defecto (la primera tarjeta activa)
-    const resetToDefault = () => {
-      const firstCard = container.querySelector('.card-1');
-      if (firstCard) {
-        activateCard(firstCard);
-      }
-    };
-
-    // Añadimos el evento a cada tarjeta
-    valueCarouselCards.forEach(card => {
-      // Cuando el ratón entra en una tarjeta, esa tarjeta se activa
-      card.addEventListener('mouseover', () => {
-        // Solo en escritorio
-        if (window.innerWidth > 768) {
-          activateCard(card);
-        }
-      });
-    });
-
-    // Cuando el ratón sale del CONTENEDOR COMPLETO, vuelve al estado inicial
-    container.addEventListener('mouseleave', () => {
-      // Solo en escritorio
-      if (window.innerWidth > 768) {
-        resetToDefault();
-      }
-    });
+  const activateCard = (card) => {
+    if (card === activeCard) return;
+    activeCard.classList.remove('active');
+    card.classList.add('active');
+    activeCard = card;
   };
+
+  const debouncedActivate = (card) => {
+    clearTimeout(hoverTimeout);
+    hoverTimeout = setTimeout(() => activateCard(card), 80);
+  };
+
+  cards.forEach(card => {
+    card.addEventListener('mouseover', () => {
+      if (window.innerWidth > 768) debouncedActivate(card);
+    });
+
+    card.addEventListener('click', () => {
+      if (window.innerWidth <= 768) activateCard(card);
+    });
+  });
+};
 
   
   // --- Initialize all functionalities ---

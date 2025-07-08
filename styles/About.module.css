@@ -1,0 +1,173 @@
+.aboutSectionUnified {
+  background-image: url('/images/aboutUsFallback.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 120px 20px;
+}
+
+.unifiedContentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- PART 1: THE MANIFESTO --- */
+
+.manifestoWrapper {
+  text-align: center;
+  margin-bottom: 5rem; 
+}
+
+.manifestoHeadline {
+  font-family: var(--font-headings);
+  font-size: 4rem; 
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--color-text); 
+  text-shadow: 0px 2px 15px rgba(255, 255, 255, 0.5);
+}
+
+.manifestoHeadline span {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.mainContentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.valueCarouselContainer {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  height: 550px;
+}
+
+.valueCarouselCard {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: default;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transform: translateZ(0);
+  will-change: flex; 
+  filter: grayscale(100%);
+  transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+              filter 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.active {
+  flex: 5;
+  filter: grayscale(0%);
+}
+
+
+.cardContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
+  color: white;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  text-align: left;
+  transition: align-items 0.6s ease;
+}
+
+.cardContent h4 {
+  color: var(--color-white);
+  opacity: 0;
+  transform: translateY(20px);
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;
+}
+
+.cardContent p {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;
+}
+
+
+
+.valueCarouselCard.active .cardContent h4,
+.valueCarouselCard.active .cardContent p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.valueCarouselCard.active .cardContent h4 {
+  max-height: 100px;
+  overflow: visible;
+  transition: opacity 0.6s ease-out 0.6s,
+              transform 0.6s ease-out 0.6s,
+              max-height 0.6s ease-out 0.6s;
+}
+
+.valueCarouselCard.active .cardContent p {
+  max-height: 200px;
+  transition: opacity 0.6s ease-out 0.6s, 
+              max-height 0.6s ease-out 0.6s, 
+              transform 0.6s ease-out 0.6s;
+}
+/* --- PART 2 & 3 CONTAINER --- */
+
+.aboutTextContent .aboutIntro {
+  font-size: 1.5rem;
+  font-family: var(--font-headings);
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+}
+
+.aboutTextContent .aboutMission {
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--color-primary);
+}
+
+.aboutTextContent .aboutMission h3 {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.aboutTextContent .aboutMission p {
+  color: var(--color-text);
+  opacity: 0.9;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+  .mainContentGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .manifestoHeadline { font-size: 2.8rem; }
+  .aboutSectionUnified { padding: 80px 20px; }
+  .valueCarouselContainer {
+    display: flex; overflow-x: auto; height: 400px;
+  }
+  .valueCarouselCard,
+  .valueCarouselCard.active { flex: 0 0 80%; }
+}

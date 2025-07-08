@@ -1,10 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# LumeCare - Aesthetic & Medical Travel to Cali, Colombia
 
-## Getting Started
+This is the official landing page for **LumeCare**, a trusted partner for international clients seeking world-class aesthetic and medical procedures in Cali, Colombia.
 
-First, run the development server:
+## 🚀 Built With
+
+- [Next.js](https://nextjs.org/)
+- [CSS Modules](https://nextjs.org/docs/basic-features/built-in-css-support)
+- Responsive Design
+- SEO & Accessibility Optimized
+
+## 📦 Setup
 
 ```bash
+npm install
 npm run dev
 # or
 yarn dev
@@ -38,4 +46,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
->>>>>>> 1d71c59 (Initial commit from Create Next App)

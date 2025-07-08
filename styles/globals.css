@@ -1,26 +1,44 @@
-@import "tailwindcss";
+/*
+  LumeCare - Main Stylesheet 
+  Version: 1.0
+  Author: [andresalinas18]
+*/
+
+/* ==================================================================
+   0. ROOT VARIABLES & GLOBAL RESET
+   ================================================================== */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #C9A475;
+  --color-primary-dark: #B58E5E;
+  --color-text: #2E2E2E;
+  --color-background: #FDFCFB;
+  --color-grey-light: #A9A9A9;
+  --color-white: #FFFFFF;
+  --color-accent-rose: #D8A9AD;
+  --color-accent-sage: #9DB5A3;
+  --font-headings: 'Lora', serif;
+  --font-body: 'Lato', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+body.nav-open { overflow: hidden; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+  color: var(--color-text);
+  font-weight: 600;
 }

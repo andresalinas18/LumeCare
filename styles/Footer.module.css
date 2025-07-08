@@ -1,0 +1,30 @@
+.footer {
+  background-color: var(--color-background);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.socialIcons {
+  margin-bottom: 1rem;
+}
+
+.socialIcons a {
+  margin: 0 0.75rem;
+  display: inline-block;
+}
+
+.socialIcons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.socialIcons img:hover {
+  transform: scale(1.1);
+}
+
+.footerText {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  opacity: 0.8;
+}

@@ -4,6 +4,8 @@ import Procedures from '../components/Procedures'
 import Hero from '../components/Hero'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import WhyCali from '../components/WhyCali'
+import WhyCaliContent from '../components/WhyCaliContent'
 
 export default function Home() {
   return (
@@ -30,6 +32,8 @@ export default function Home() {
         <Hero />
         <About />
         <Procedures />
+        <WhyCali />
+        <WhyCaliContent />
       </main>
 
       {/* FOOTER */}

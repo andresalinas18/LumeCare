@@ -1,35 +1,55 @@
 // components/WhyCali.jsx
-'use client';
-import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import GalleryGrid from './WhyCaliContent';
 
 export default function WhyCali() {
-  return (
-    <section className="relative h-screen w-full overflow-hidden">
-      {/* Fondo video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-      >
-        <source src="/videos/Cali.mp4" type="video/mp4" />
-        Tu navegador no soporta videos HTML5.
-      </video>
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: sectionRef });
 
-      {/* Texto centrado */}
-      <motion.div
-        className="z-20 relative h-full flex flex-col items-center justify-center text-white text-center"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <h1 className="text-6xl md:text-8xl font-bold leading-[1.2] md:leading-[1.2] tracking-wide text-[var(--color-background)]">
-          <span className="block font-[var(--font-headings)] text-4x4">Your journey</span>
-          <span className="block font-[var(--font-headings)] text-4x4">starts in Cali</span>
-          <span className="block"></span>
-        </h1>
-      </motion.div>
-    </section>
+  const y = useTransform(scrollYProgress, [0, 0.3], ['0%', '-100%']);
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  const [isPinned, setIsPinned] = useState(false);
+
+  useEffect(() => {
+    return scrollYProgress.onChange((value) => {
+      setIsPinned(value > 0.3);
+    });
+  }, [scrollYProgress]);
+
+  return (
+    <div className="relative w-full overflow-hidden">
+      {/* Video Background Section */}
+      <section ref={sectionRef} className="relative h-screen w-full">
+        <video
+          className="absolute inset-0 object-cover w-full h-full z-0 brightness-[0.4]"
+          src="/videos/why-cali.mp4"
+          autoPlay
+          loop
+          muted
+        />
+        <motion.h2
+          className="absolute top-1/2 left-1/2 text-white text-6xl font-bold -translate-x-1/2 -translate-y-1/2 z-10 tracking-widest"
+          style={{ y, opacity }}
+        >
+          Why Cali
+        </motion.h2>
+      </section>
+
+      {/* Sticky title once past threshold */}
+      {isPinned && (
+        <div className="sticky top-0 z-20 bg-white/80 backdrop-blur-sm shadow-md">
+          <h2 className="text-3xl font-semibold text-center py-4 text-black tracking-wider">
+            Why Cali
+          </h2>
+        </div>
+      )}
+
+      {/* Why Cali Content */}
+      <section className="px-4 py-16 bg-white">
+        <GalleryGrid />
+      </section>
+    </div>
   );
 }
+

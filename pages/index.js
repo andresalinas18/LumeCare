@@ -5,7 +5,7 @@ import Hero from '../components/Hero'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import WhyCali from '../components/WhyCali'
-import WhyCaliContent from '../components/WhyCaliContent'
+import WhyCaliContent from '../components/WhyCaliContent/WhyCaliContent'
 
 export default function Home() {
   return (
@@ -33,7 +33,6 @@ export default function Home() {
         <About />
         <Procedures />
         <WhyCali />
-        <WhyCaliContent />
       </main>
 
       {/* FOOTER */}

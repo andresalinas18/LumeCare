@@ -1,55 +1,98 @@
 // components/WhyCali.jsx
-import { useEffect, useRef, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import GalleryGrid from './WhyCaliContent';
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import GalleryGrid from './WhyCaliContent/GalleryGrid';
 
 export default function WhyCali() {
-  const sectionRef = useRef(null);
-  const { scrollYProgress } = useScroll({ target: sectionRef });
+  const phrases = [
+    { first: 'Live', second: 'empowered' },
+    { first: 'Live', second: 'confidently' },
+    { first: 'Live', second: 'beautifully' },
+    { first: 'Move', second: 'forward' },
+    { first: 'Move', second: 'freely' },
+    { first: 'Move', second: 'with purpose' },
+  ];
 
-  const y = useTransform(scrollYProgress, [0, 0.3], ['0%', '-100%']);
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
-  const [isPinned, setIsPinned] = useState(false);
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    return scrollYProgress.onChange((value) => {
-      setIsPinned(value > 0.3);
-    });
-  }, [scrollYProgress]);
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % phrases.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="relative w-full overflow-hidden">
-      {/* Video Background Section */}
-      <section ref={sectionRef} className="relative h-screen w-full">
+    <>
+      {/* VIDEO HERO SECTION */}
+      <section className="relative h-screen w-full overflow-hidden">
         <video
-          className="absolute inset-0 object-cover w-full h-full z-0 brightness-[0.4]"
-          src="/videos/why-cali.mp4"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          src="/videos/Live.mp4"
           autoPlay
           loop
           muted
+          playsInline
         />
-        <motion.h2
-          className="absolute top-1/2 left-1/2 text-white text-6xl font-bold -translate-x-1/2 -translate-y-1/2 z-10 tracking-widest"
-          style={{ y, opacity }}
-        >
-          Why Cali
-        </motion.h2>
-      </section>
 
-      {/* Sticky title once past threshold */}
-      {isPinned && (
-        <div className="sticky top-0 z-20 bg-white/80 backdrop-blur-sm shadow-md">
-          <h2 className="text-3xl font-semibold text-center py-4 text-black tracking-wider">
-            Why Cali
-          </h2>
+        <div className="absolute inset-0 z-10 flex flex-col justify-center items-center px-4 text-white text-center">
+          <div className="relative flex items-center text-5xl md:text-7xl font-light leading-tight translate-x-20">
+            <div className="relative h-[80px] md:h-[100px] w-[240px] overflow-hidden text-right font-lato">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={phrases[index].first}
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -30, opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="block font-bold pr-2"
+                >
+                  {phrases[index].first}
+                </motion.span>
+              </AnimatePresence>
+            </div>
+
+            <span className="px-1 text-white text-6xl font-light"></span>
+
+            <div className="relative h-[80px] md:h-[100px] min-w-[400px] overflow-hidden text-left font-lora">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={phrases[index].second}
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -30, opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="block italic pl-2"
+                >
+                  {phrases[index].second}
+                </motion.span>
+              </AnimatePresence>
+            </div>
+          </div>
+
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.8 }}
+            className="mt-8 bg-white text-black font-medium px-6 py-3 rounded-full text-lg shadow-lg hover:bg-neutral-100 transition"
+          >
+            Schedule an Online Consultation
+          </motion.button>
         </div>
-      )}
-
-      {/* Why Cali Content */}
-      <section className="px-4 py-16 bg-white">
-        <GalleryGrid />
       </section>
-    </div>
+
+      {/* GALLERYGRID CON ANIMACIÓN */}
+      <section className="bg-white py-24 px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          className="max-w-7xl mx-auto"
+        >
+          <GalleryGrid />
+        </motion.div>
+      </section>
+    </>
   );
 }
-

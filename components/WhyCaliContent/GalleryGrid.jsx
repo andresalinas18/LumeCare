@@ -5,22 +5,22 @@ import Image from 'next/image';
 
 const imageData = [
   {
-    src: '/images/face.webp',
+    src: '/images/firstNew.webp',
     title: 'Beauty Meets Culture',
     description: 'In Cali, advanced aesthetic care blends with rich culture to create unforgettable wellness journeys.'
   },
   {
-    src: '/images/face.webp',
+    src: '/images/secondNew.webp',
     title: 'World-Class Procedures',
     description: 'Cali hosts highly trained professionals and modern clinics trusted by international visitors.'
   },
   {
-    src: '/images/face.webp',
+    src: '/images/fourthNew.webp',
     title: 'Safe & Modern',
     description: 'With top-tier medical facilities and friendly service, Cali is a rising hub for medical tourism.'
   },
   {
-    src: '/images/face.webp',
+    src: '/images/fourthNews.webp',
     title: 'Affordable Excellence',
     description: 'Experience premium beauty treatments at accessible prices while enjoying Colombian warmth.'
   },
@@ -39,15 +39,21 @@ export default function GalleryGrid() {
           className="col-span-4 row-span-2 relative cursor-pointer rounded-xl overflow-hidden shadow-xl"
           onClick={() => setSelected(0)}
         >
+        <div className="absolute top-0 left-0 text-black text-sm md:text-base font-semibold px-3 py-1 rounded-br-lg z-10">
+          Colombia Ranks Among <br />the Top Countries for Plastic <br />Surgery Worldwide
+        </div>
           <Image src={imageData[0].src} alt="Image 0" fill style={{ objectFit: 'cover' }} />
         </motion.div>
 
         {/* Imagen B */}
         <motion.div
           layoutId="image-1"
-          className="col-span-2 row-span-2 relative cursor-pointer rounded-xl overflow-hidden shadow-xl"
+          className="col-span-2 row-span-2 relative cursor-pointer rounded-xl overflow-hidden shadow-xl font-lato"
           onClick={() => setSelected(1)}
         >
+        <div className="absolute top-0 left-0 text-black text-sm md:text-base font-semibold px-3 py-1 rounded-br-lg z-10">
+          I flew to Colombia for a <br />$4,000 hysterectomy because <br />I couldn't afford it in the US. <br />I have no regrets.
+        </div>
           <Image src={imageData[1].src} alt="Image 1" fill style={{ objectFit: 'cover' }} />
         </motion.div>
 
@@ -57,6 +63,9 @@ export default function GalleryGrid() {
           className="col-span-2 row-span-2 relative cursor-pointer rounded-xl overflow-hidden shadow-xl"
           onClick={() => setSelected(2)}
         >
+        <div className="absolute top-0 left-0 text-black text-sm md:text-base font-semibold px-3 py-1 rounded-br-lg z-10">
+          Colombia Ranks Among <br />the Top Countries for Plastic <br />Surgery Worldwide
+        </div>
           <Image src={imageData[2].src} alt="Image 2" fill style={{ objectFit: 'cover' }} />
         </motion.div>
 
@@ -66,6 +75,9 @@ export default function GalleryGrid() {
           className="col-span-4 row-span-2 relative cursor-pointer rounded-xl overflow-hidden shadow-xl"
           onClick={() => setSelected(3)}
         >
+        <div className="absolute top-0 left-0 text-black text-sm md:text-base font-semibold px-3 py-1 rounded-br-lg z-10">
+          Colombia Ranks Among <br />the Top Countries for Plastic <br />Surgery Worldwide
+        </div>
           <Image src={imageData[3].src} alt="Image 3" fill style={{ objectFit: 'cover' }} />
         </motion.div>
       </div>

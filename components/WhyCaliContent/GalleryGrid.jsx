@@ -42,7 +42,13 @@ export default function GalleryGrid() {
         <div className="absolute top-0 left-0 text-black text-sm md:text-base font-semibold px-3 py-1 rounded-br-lg z-10">
           Colombia Ranks Among <br />the Top Countries for Plastic <br />Surgery Worldwide
         </div>
-          <Image src={imageData[0].src} alt="Image 0" fill style={{ objectFit: 'cover' }} />
+            <Image
+              src={imageData[0].src}
+              alt="Image 0"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{ objectFit: 'cover' }}
+            />
         </motion.div>
 
         {/* Imagen B */}
@@ -54,7 +60,13 @@ export default function GalleryGrid() {
         <div className="absolute top-0 left-0 text-black text-sm md:text-base font-semibold px-3 py-1 rounded-br-lg z-10">
           I flew to Colombia for a <br />$4,000 hysterectomy because <br />I couldn't afford it in the US. <br />I have no regrets.
         </div>
-          <Image src={imageData[1].src} alt="Image 1" fill style={{ objectFit: 'cover' }} />
+            <Image
+              src={imageData[1].src}
+              alt="Image 1"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{ objectFit: 'cover' }}
+            />
         </motion.div>
 
         {/* Imagen C */}
@@ -66,7 +78,13 @@ export default function GalleryGrid() {
         <div className="absolute top-0 left-0 text-black text-sm md:text-base font-semibold px-3 py-1 rounded-br-lg z-10">
           Colombia Ranks Among <br />the Top Countries for Plastic <br />Surgery Worldwide
         </div>
-          <Image src={imageData[2].src} alt="Image 2" fill style={{ objectFit: 'cover' }} />
+            <Image
+              src={imageData[2].src}
+              alt="Image 2"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{ objectFit: 'cover' }}
+            />
         </motion.div>
 
         {/* Imagen D */}
@@ -78,7 +96,13 @@ export default function GalleryGrid() {
         <div className="absolute top-0 left-0 text-black text-sm md:text-base font-semibold px-3 py-1 rounded-br-lg z-10">
           Colombia Ranks Among <br />the Top Countries for Plastic <br />Surgery Worldwide
         </div>
-          <Image src={imageData[3].src} alt="Image 3" fill style={{ objectFit: 'cover' }} />
+            <Image
+              src={imageData[3].src}
+              alt="Image 3"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{ objectFit: 'cover' }}
+            />
         </motion.div>
       </div>
 

@@ -22,14 +22,6 @@ export default function Document() {
         {/* Theme for mobile browsers */}
         <meta name="theme-color" content="#ffffff" />
 
-        {/* Optional: preload fonts for performance */}
-        <link
-          rel="preload"
-          href="/fonts/Lora.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
       </Head>
       <body>
         <Main />

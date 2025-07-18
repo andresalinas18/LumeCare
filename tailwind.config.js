@@ -1,4 +1,6 @@
 // tailwind.config.js
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -6,6 +8,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: '#C9A475',
+        'primary-dark': '#B58E5E',
+        text: '#2E2E2E',
+        background: '#FDFCFB',
+        'grey-light': '#A9A9A9',
+        white: '#FFFFFF',
+        'accent-rose': '#D8A9AD',
+        'accent-sage': '#9DB5A3',
+      },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
         lora: ['Lora', 'serif'],

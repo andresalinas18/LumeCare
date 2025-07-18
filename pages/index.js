@@ -5,7 +5,8 @@ import Hero from '../components/Hero'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import WhyCali from '../components/WhyCali'
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../components/ContactForm"
+import Step from "../components/StepScrollSection"
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <main id="main" aria-label="LumeCare main content">
         <Hero />
         <About />
+        <Step />
         <Procedures />
         <WhyCali />
         <ContactForm />

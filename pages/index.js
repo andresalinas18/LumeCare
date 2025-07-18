@@ -1,12 +1,15 @@
 import Head from 'next/head'
-import About from '../components/About'
-import Procedures from '../components/Procedures'
-import Hero from '../components/Hero'
 import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Hero from '../components/Hero'
+import About from '../components/About'
+import Step from "../components/StepScrollSection"
+import Procedures from '../components/Procedures'
 import WhyCali from '../components/WhyCali'
 import ContactForm from "../components/ContactForm"
-import Step from "../components/StepScrollSection"
+import Footer from '../components/Footer'
+
+
+
 
 export default function Home() {
   return (

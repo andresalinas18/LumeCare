@@ -1,30 +1,51 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
+
+// 1. Definimos las "variantes" de la animación. Es como un objeto de estilos para la animación.
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1, // Anima los hijos con un desfase de 0.1s entre cada uno
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring', // ¡Animación de resorte!
+      stiffness: 100,
+      damping: 15,
+    },
+  },
+};
 
 export default function StepItem({ index, title, description, isActive }) {
-  return (
-    <motion.div
-      className="h-[80vh] flex items-center justify-center"
-      initial={{ opacity: 0, y: 100 }}
-      animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0.2, y: 100 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
-      <div className="flex w-full max-w-6xl px-4">
-        {/* Barra lateral con número */}
-        <div className="flex flex-col items-center mr-8 w-12">
-          <div
-            className={`w-6 h-6 rounded-full transition-all duration-500 ${
-              isActive ? "bg-gold scale-125" : "bg-gray-500 scale-75"
-            }`}
-          ></div>
-          <span className="text-white mt-2 text-sm font-light">{index + 1}</span>
-        </div>
+  const formattedIndex = String(index + 1).padStart(2, '0');
 
-        {/* Contenido */}
-        <div className="text-white">
-          <h3 className="text-3xl font-semibold font-lora mb-2">{title}</h3>
-          <p className="text-lg leading-relaxed font-lato">{description}</p>
-        </div>
-      </div>
+  return (
+    // 2. Usamos motion.div y le pasamos nuestras variantes
+    // Se anima automáticamente de "hidden" a "visible" cuando `isActive` cambia.
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate={isActive ? 'visible' : 'hidden'}
+      className="max-w-md" // El resto de clases de layout se mantienen
+    >
+      <motion.span variants={itemVariants} className="block text-primary text-3xl font-bold font-lato">
+        {formattedIndex}
+      </motion.span>
+      
+      <motion.h3 variants={itemVariants} className="font-lora text-4xl md:text-5xl font-medium mt-4 mb-6 text-white">
+        {title}
+      </motion.h3>
+      
+      <motion.p variants={itemVariants} className="font-lato text-lg md:text-xl leading-relaxed">
+        {description}
+      </motion.p>
     </motion.div>
   );
 }

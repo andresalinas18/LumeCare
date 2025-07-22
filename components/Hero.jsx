@@ -1,17 +1,33 @@
 // components/Hero.jsx
-import React from 'react';
+
+"use client";
+import React, { useRef, useEffect } from 'react';
 
 export default function Hero() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      const playPromise = videoRef.current.play();
+
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.warn("Video autoplay was prevented by the browser:", error);
+        });
+      }
+    }
+  }, []);
+
   return (
     <section
       id="home"
       className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-black"
     >
-      {/* Video de fondo */}
+      {/* Video */}
       <div className="absolute inset-0 z-10">
         <video
+          ref={videoRef}
           className="w-full h-full object-cover"
-          autoPlay
           loop
           muted
           playsInline
@@ -26,7 +42,7 @@ export default function Hero() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-[rgba(46,46,46,0.45)] z-20" />
 
-      {/* Contenido */}
+      {/* layout */}
       <div className="relative z-30 text-white text-center px-5">
         <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] lg:text-[4.5rem] font-lora font-medium italic leading-[1.1] mb-6 text-white">
           Your Transformation,<br /> Guided with LumeCare.

@@ -4,7 +4,6 @@
 import { motion } from "framer-motion";
 import steps from "./stepData";
 
-// Este componente recibe los valores de la animación como props.
 export default function MobileJourney({
   titleOpacity,
   titleY,
@@ -15,7 +14,6 @@ export default function MobileJourney({
   mobileStep4Opacity,
 }) {
   return (
-    // THE FIX: Este contenedor es 'relative' y sirve como ancla estable.
     <div className="relative h-full w-full">
       <motion.div className="text-center pt-24 px-4" style={{ opacity: titleOpacity, y: titleY }}>
         <h2 className="text-5xl font-lora text-white">LumeCare</h2>

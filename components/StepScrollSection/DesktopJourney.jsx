@@ -42,7 +42,7 @@ export default function DesktopJourney({
         <h3 className="font-lora text-2xl font-medium text-white">{steps[1].title.split(':')[0]}</h3>
         <p className="font-lato text-base text-white/70 mt-3 max-w-xs">{steps[1].description}</p>
       </motion.div>
-      <motion.div className="absolute text-center" style={{ opacity: step3Opacity, top: '130px', left: '600px', x: '-50%' }}>
+      <motion.div className="absolute text-center" style={{ opacity: step3Opacity, top: '130px', left: '700px', x: '-50%' }}>
         <span className="block text-xl font-bold text-primary mb-2">3.</span>
         <h3 className="font-lora text-2xl font-medium text-white">{steps[2].title.split(':')[0]}</h3>
         <p className="font-lato text-base text-white/70 mt-3 max-w-xs">{steps[2].description}</p>

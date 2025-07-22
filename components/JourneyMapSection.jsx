@@ -41,12 +41,12 @@ export default function JourneyMapSection() {
 
       <div className="sticky top-0 h-screen w-full z-20">
         {/* Desktop */}
-        <div className="hidden md:block h-full w-full">
+        <div className="hidden lg:block relative h-full w-full">
           <DesktopJourney {...animations} />
         </div>
         
         {/* Movil */}
-        <div className="md:hidden h-full w-full">
+        <div className="lg:hidden relative h-full w-full">
           <MobileJourney {...animations} />
         </div>
       </div>

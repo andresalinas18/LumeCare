@@ -5,17 +5,14 @@ import React, { useRef, useEffect } from 'react';
 
 export default function Hero() {
   const videoRef = useRef(null);
-
   useEffect(() => {
     if (videoRef.current) {
-      setTimeout(() => {
-        const playPromise = videoRef.current.play();
-        if (playPromise !== undefined) {
-          playPromise.catch(error => {
-            console.warn("Video autoplay was prevented by the browser:", error);
-          });
-        }
-      }, 50);
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.warn("Video autoplay was prevented by the browser:", error);
+        });
+      }
     }
   }, []);
 
@@ -28,11 +25,12 @@ export default function Hero() {
         <video
           ref={videoRef}
           className="w-full h-full object-cover"
+          autoPlay 
           loop
           muted
           playsInline
+          src="/videos/Videolumecareportada.mp4"
           poster="/images/Fallback.png"
-          src="/videos/Videolumecareportada.mp4" 
         >
           Your browser does not support the video tag.
         </video>

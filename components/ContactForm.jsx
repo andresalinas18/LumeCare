@@ -77,7 +77,7 @@ export default function ContactForm() {
       </div>
     )}
 
-    <section className="bg-[var(--color-background)] py-20 px-6">
+    <section id="contact" className="bg-[var(--color-background)] py-20 px-6">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
         {/* Left column */}
         <div className="lg:w-1/2">

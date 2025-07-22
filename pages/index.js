@@ -4,7 +4,7 @@ import Hero from '../components/Hero'
 import About from '../components/About'
 import Step from "../components/JourneyMapSection"
 import Procedures from '../components/Procedures'
-import WhyCali from '../components/WhyCali'
+import LumeCTA from '../components/LumeCareCTA'
 import ContactForm from "../components/ContactForm"
 import Footer from '../components/Footer'
 
@@ -37,7 +37,7 @@ export default function Home() {
         <About />
         <Step />
         <Procedures />
-        <WhyCali />
+        <LumeCTA />
         <ContactForm />
       </main>
 

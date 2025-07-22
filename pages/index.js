@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import About from '../components/About'
-import Step from "../components/StepScrollSection"
+import Step from "../components/JourneyMapSection"
 import Procedures from '../components/Procedures'
 import WhyCali from '../components/WhyCali'
 import ContactForm from "../components/ContactForm"

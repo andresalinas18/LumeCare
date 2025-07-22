@@ -30,14 +30,22 @@ module.exports = {
         lato: ['Lato', 'sans-serif'],
         lora: ['Lora', 'serif'],
       },
+
       animation: {
-        fadeIn: 'fadeIn 0.4s ease-out forwards',
+        fadeIn: 'fadeIn 0.5s ease-in-out forwards',
       },
       keyframes: {
         fadeIn: {
-          '0%': { opacity: '0', transform: 'translateY(-10px)' },
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+      },
+
+      transitionTimingFunction: {
+        'custom-bezier': 'cubic-bezier(0.65, 0, 0.35, 1)',
+      },
+      flex: {
+        '5': '5 1 0%',
       },
     },
   },

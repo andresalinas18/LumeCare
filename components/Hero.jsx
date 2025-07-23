@@ -1,47 +1,49 @@
 // components/Hero.jsx 
 
 "use client";
-import React, { useRef, useEffect } from 'react';
+import React, { useState } from "react";
 
 export default function Hero() {
-  const videoRef = useRef(null);
-  useEffect(() => {
-    if (videoRef.current) {
-      const playPromise = videoRef.current.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.warn("Video autoplay was prevented by the browser:", error);
-        });
-      }
-    }
-  }, []);
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   return (
     <section
       id="home"
       className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-black"
     >
+      {/* Video Background */}
       <div className="absolute inset-0 z-10">
         <video
-          ref={videoRef}
-          className="w-full h-full object-cover"
-          autoPlay 
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+            videoLoaded ? "opacity-100" : "opacity-0"
+          }`}
+          preload="auto"
+          autoPlay
           loop
           muted
           playsInline
-          src="/videos/Videolumecareportada.mp4"
           poster="/images/Fallback.png"
+          src="/videos/Videolumecareportada.mp4"
+          onLoadedData={() => setVideoLoaded(true)} // fade in when loaded
         >
           Your browser does not support the video tag.
         </video>
+
+        {!videoLoaded && (
+          <img
+            src="/images/Fallback.png"
+            alt="LumeCare background"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        )}
       </div>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-[rgba(46,46,46,0.45)] z-20" />
 
-      {/* Contenido */}
+      {/* Content */}
       <div className="relative z-30 text-white text-center px-5">
-        <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] lg:text-[4.5rem] font-lora font-medium italic leading-[1.1] mb-6 text-white">
+        <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] lg:text-[4.5rem] font-lora font-medium italic leading-[1.1] mb-6">
           Your Transformation,<br /> Guided with LumeCare.
         </h1>
         <p className="text-base sm:text-lg md:text-[1.3rem] max-w-[700px] mx-auto mb-8 font-lora font-medium italic opacity-95">

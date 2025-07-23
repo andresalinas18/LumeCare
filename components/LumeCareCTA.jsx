@@ -1,4 +1,4 @@
-// /components/WhyCali.jsx
+// /components/LumeCareCTA.jsx
 
 "use client";
 import { useEffect, useState } from 'react';

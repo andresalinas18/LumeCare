@@ -23,7 +23,7 @@ export default function Hero() {
           muted
           playsInline
           poster="/images/Fallback.png"
-          src="/videos/Videolumecareportada.mp4"
+          src="/videos/Videolumecareportada.webm"
           onLoadedData={() => setVideoLoaded(true)} // fade in when loaded
         >
           Your browser does not support the video tag.

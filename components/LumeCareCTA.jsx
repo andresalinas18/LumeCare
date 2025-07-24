@@ -23,7 +23,7 @@ export default function WhyCali() {
       setIndex((prev) => (prev + 1) % phrases.length);
     }, 2500);
     return () => clearInterval(interval);
-  }, [phrases.length]); // Dependency added for stability.
+  }, [phrases.length]); 
 
   return (
     <>
@@ -36,7 +36,7 @@ export default function WhyCali() {
           loop
           muted
           playsInline
-          poster="/images/Fallback.png" // Poster for faster initial load.
+          poster="/images/LiveThumbnail.jpg.png" 
         />
 
         <div className="absolute inset-0 z-10 flex flex-col justify-center items-center px-4 text-white text-center">

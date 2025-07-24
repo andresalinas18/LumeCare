@@ -1,19 +1,31 @@
 // components/Hero.jsx 
 
-"use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 export default function Hero() {
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      // Attempt autoplay programmatically
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(err => {
+          console.warn("Autoplay blocked, waiting for user interaction:", err);
+        });
+      }
+    }
+  }, []);
 
   return (
     <section
       id="home"
       className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-black"
     >
-      {/* Video Background */}
       <div className="absolute inset-0 z-10">
         <video
+          ref={videoRef}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
             videoLoaded ? "opacity-100" : "opacity-0"
           }`}
@@ -23,8 +35,7 @@ export default function Hero() {
           muted
           playsInline
           poster="/images/Fallback.png"
-          src="/videos/Videolumecareportada.webm"
-          onLoadedData={() => setVideoLoaded(true)} // fade in when loaded
+          onLoadedData={() => setVideoLoaded(true)}
         >
           Your browser does not support the video tag.
         </video>

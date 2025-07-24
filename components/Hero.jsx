@@ -43,7 +43,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-30 text-white text-center px-5">
-        <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] lg:text-[4.5rem] font-lora font-medium italic leading-[1.1] mb-6">
+        <h1 className="text-[2.5rem] text-white sm:text-[3rem] md:text-[4rem] lg:text-[4.5rem] font-lora font-medium italic leading-[1.1] mb-6">
           Your Transformation,<br /> Guided with LumeCare.
         </h1>
         <p className="text-base sm:text-lg md:text-[1.3rem] max-w-[700px] mx-auto mb-8 font-lora font-medium italic opacity-95">

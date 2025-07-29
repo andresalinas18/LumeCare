@@ -1,3 +1,5 @@
+// /components/TestimonialGrid.jsx
+
 "use client";
 import { motion } from "framer-motion";
 
@@ -46,7 +48,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 bg-background">
+    <section id="reviews" className="py-20 bg-background className=scroll-mt-[100px]">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-center text-3xl sm:text-4xl font-lora italic mb-12">
           What Our Patients Say

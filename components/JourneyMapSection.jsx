@@ -33,8 +33,9 @@ export default function JourneyMapSection() {
 
   return (
     <section
+      id="yourJourney"
       ref={targetRef}
-      className="relative h-[500vh] bg-cover bg-center bg-fixed"
+      className="relative h-[400vh] bg-cover bg-center bg-fixed"
       style={{ backgroundImage: "url('/images/stepSectionBg.webp')" }}
     >
       <div className="absolute inset-0 bg-black/80 z-10" />

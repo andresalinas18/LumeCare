@@ -78,13 +78,11 @@ export default function Procedures() {
   };
 
   return (
-    // --- CAMBIO 1: Hacemos que la sección ocupe toda la pantalla en desktop y removemos su padding vertical ---
     <section 
-      id="procedures" 
+      id="procedures"
       aria-label="Our Medical Procedures" 
-      className="w-full bg-background py-16 sm:py-24 md:py-0 md:min-h-screen md:flex md:items-center"
+      className="section-anchor w-full bg-background py-16 sm:py-24 md:py-0 md:min-h-screen md:flex md:items-center"
     >
-      {/* --- CAMBIO 2: Hacemos que el contenedor de las tarjetas ocupe casi toda la altura disponible --- */}
       <div className="w-full max-w-8xl mx-auto px-3 flex flex-col md:flex-row md:h-[95vh] gap-6">
         {data.map((item, index) => {
           const isActive = active === index;
@@ -100,7 +98,6 @@ export default function Procedures() {
               onClick={() => handleToggle(index)}
             >
               <div className="w-full h-full flex flex-col md:flex-row">
-                {/* Sección de la Imagen */}
                 <div
                   className={`
                     relative w-full bg-cover bg-center 
@@ -120,7 +117,6 @@ export default function Procedures() {
                   )}
                 </div>
 
-                {/* Contenido de Texto */}
                 <div className={`
                   bg-white text-text p-6 md:p-8 
                   ${isActive ? 'block animate-fadeIn' : 'hidden'}

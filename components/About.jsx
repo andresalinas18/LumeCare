@@ -1,3 +1,5 @@
+// /components/About.jsx
+
 import { useEffect, useRef, useState } from 'react';
 
 export default function About() {
@@ -73,6 +75,7 @@ export default function About() {
 
   return (
     <section 
+      id="about"
       style={{ backgroundImage: "url('/images/aboutUsFallback.jpg')" }}
       className="bg-cover bg-center bg-fixed py-[120px] px-5"
     >

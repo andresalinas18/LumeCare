@@ -21,7 +21,7 @@ export default function Hero() {
 
   return (
     <section
-      id="home"
+      id="LumeCare"
       className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-black"
     >
       {/* === Video Background === */}

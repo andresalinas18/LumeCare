@@ -1,3 +1,5 @@
+// /components/Header.jsx
+
 "use client";
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
@@ -6,30 +8,24 @@ import LumeCareLogo from '/public/images/LumeCareLogo.svg';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // --- States for scroll-based header visibility ---
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  // --- Handles header visibility on scroll ---
   const handleScroll = () => {
-    // Keep header visible if mobile menu is open
     if (isMenuOpen) {
       setIsVisible(true);
       return;
     }
 
     const currentScrollY = window.scrollY;
-    // Hide header on scroll down, show on scroll up
     if (currentScrollY > lastScrollY && currentScrollY > 100) {
       setIsVisible(false);
     } else {
       setIsVisible(true);
     }
-    // Update the last scroll position
     setLastScrollY(currentScrollY);
   };
 
-  // --- Effect to attach and clean up the scroll listener ---
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -37,7 +33,6 @@ export default function Header() {
     };
   }, [lastScrollY, isMenuOpen]);
 
-  // This effect handles body scroll when the mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto';
     return () => {
@@ -51,7 +46,6 @@ export default function Header() {
   return (
     <header
       id="home"
-      // --- Applies transition and visibility classes based on state ---
       className={`
         fixed top-[15px] left-[15px] right-[15px] z-[100] 
         bg-white/80 border border-white/20 rounded-lg 
@@ -61,7 +55,7 @@ export default function Header() {
       `}
     >
       <nav className="relative flex items-center h-[80px] px-6 justify-between">
-        {/* Logo (izquierda) */}
+        {/* Logo */}
         <div className="flex items-center">
           <a href="#home" aria-label="LumeCare - Go to homepage" className="block h-full max-h-[4.5rem]">
             <Image
@@ -76,14 +70,15 @@ export default function Header() {
         {/* Center Nav - Desktop */}
         <div className="hidden lg:flex flex-1 justify-center">
           <ul className="flex items-center gap-[2.5rem] list-none m-0 p-0">
-            <li><a href="#home" onClick={handleLinkClick} className="text-text text-base font-normal transition-colors duration-300 hover:text-primary">Home</a></li>
-            <li><a href="#procedures" onClick={handleLinkClick} className="text-text text-base font-normal transition-colors duration-300 hover:text-primary">Procedures</a></li>
+            <li><a href="#LumeCare" onClick={handleLinkClick} className="text-text text-base font-normal transition-colors duration-300 hover:text-primary">Home</a></li>
             <li><a href="#about" onClick={handleLinkClick} className="text-text text-base font-normal transition-colors duration-300 hover:text-primary">About</a></li>
-            <li><a href="#why-cali" onClick={handleLinkClick} className="text-text text-base font-normal transition-colors duration-300 hover:text-primary">Why Cali?</a></li>
+            <li><a href="#yourJourney" onClick={handleLinkClick} className="text-text text-base font-normal transition-colors duration-300 hover:text-primary">Your Journey</a></li>
+            <li><a href="#procedures" onClick={handleLinkClick} className="text-text text-base font-normal transition-colors duration-300 hover:text-primary">Procedures</a></li>
+            <li><a href="#reviews" onClick={handleLinkClick} className="text-text text-base font-normal transition-colors duration-300 hover:text-primary">Reviews</a></li>
           </ul>
         </div>
 
-        {/* Contact Button - Desktop (derecha) */}
+        {/* Contact Button - Desktop */}
         <div className="hidden lg:flex items-center">
           <a href="#contact" onClick={handleLinkClick} className="inline-block px-6 py-2 text-white font-bold text-[0.9rem] uppercase tracking-[1px] bg-primary rounded-[5px] no-underline transition duration-300 ease-in-out hover:bg-primary-dark hover:-translate-y-[2px]">
             Contact Us
@@ -99,10 +94,11 @@ export default function Header() {
         {isMenuOpen && (
           <div className="absolute top-full left-0 w-full bg-white rounded-b-lg shadow-lg py-6 px-6 flex flex-col gap-6 animate-slideDown z-[99]">
             <ul className="flex flex-col gap-4 text-center">
-              <li><a href="#home" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">Home</a></li>
-              <li><a href="#procedures" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">Procedures</a></li>
+              <li><a href="#LumeCare" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">Home</a></li>
               <li><a href="#about" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">About</a></li>
-              <li><a href="#why-cali" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">Why Cali?</a></li>
+              <li><a href="#stepByStep" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">The LumeCare Journey</a></li>
+              <li><a href="#procedures" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">Procedures</a></li>
+              <li><a href="#reviews" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">Reviews</a></li>
               <li>
                 <a href="#contact" onClick={handleLinkClick} className="inline-block w-full text-center px-6 py-2 text-white font-bold text-[0.9rem] uppercase tracking-[1px] bg-primary rounded-[5px] transition duration-300 hover:bg-primary-dark">
                   Contact Us

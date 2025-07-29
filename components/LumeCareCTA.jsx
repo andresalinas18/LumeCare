@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
-export default function WhyCali() {
+export default function LumeCareCTA() {
   const phrases = [
     { first: 'Live', second: 'empowered' },
     { first: 'Live', second: 'confidently' },

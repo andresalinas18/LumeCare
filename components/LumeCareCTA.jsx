@@ -3,7 +3,7 @@
 "use client";
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import GalleryGrid from './LumeCareCTA/GalleryGrid';
+
 
 export default function WhyCali() {
   const phrases = [

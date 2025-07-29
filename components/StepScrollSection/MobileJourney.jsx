@@ -1,7 +1,7 @@
 // /components/MobileJourney.jsx 
 "use client";
 import { motion } from "framer-motion";
-import steps from "./stepData";
+import steps from "./StepData";
 
 export default function MobileJourney({
   titleOpacity,

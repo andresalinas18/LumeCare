@@ -1,0 +1,100 @@
+"use client";
+import { motion } from "framer-motion";
+
+const testimonials = [
+  {
+    stars: 5,
+    text: "Cali, Colombia is absolutely the best place for an aesthetic transformation. The city feels vibrant, welcoming, and the medical standards exceeded my expectations.",
+    author: "Sarah M.",
+    role: "Patient from USA",
+    img: "/images/testimonials/isabella.jpg",
+    bg: "bg-white text-black",
+  },
+  {
+    stars: 5,
+    text: "The LumeCare team made me feel at home from the moment I arrived. Their warmth and care during my entire travel made the experience unforgettable.",
+    author: "Sophie L.",
+    role: "Patient from Canada",
+    img: "/images/testimonials/sophie.jpg",
+    bg: "bg-purple-100 text-black",
+  },
+  {
+    stars: 5,
+    text: "Everything about my treatment was perfect. The associates were attentive, professional, and truly cared about my recovery and comfort.",
+    author: "Theo R.",
+    role: "Patient from UK",
+    img: "/images/testimonials/daniel.jpg",
+    bg: "bg-black text-white",
+  },
+  {
+    stars: 5,
+    text: "I was nervous about traveling abroad for surgery, but LumeCare’s guidance made it smooth and safe. From airport pickup to aftercare, everything was seamless.",
+    author: "Isabella S.",
+    role: "Patient from Spain",
+    img: "/images/testimonials/caroline.jpg",
+    bg: "bg-white text-black",
+  },
+  {
+    stars: 5,
+    text: "The attention to detail and personalized approach were incredible. I left Cali not only transformed physically but also emotionally renewed.",
+    author: "Michael T.",
+    role: "Patient from USA",
+    img: "/images/testimonials/michael.jpg",
+    bg: "bg-purple-200 text-black",
+  },
+];
+
+export default function Testimonials() {
+  return (
+    <section className="py-20 bg-background">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-center text-3xl sm:text-4xl font-lora italic mb-12">
+          What Our Patients Say
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonials.map((t, index) => (
+            <motion.div
+              key={index}
+              className={`p-6 rounded-2xl shadow-md ${t.bg}`}
+              whileHover={{
+                rotate: [0, -1.5, 1.5, 0],
+                scale: 1.03,
+                transition: { duration: 0.4, ease: "easeInOut" },
+              }}
+            >
+              {/* Stars */}
+              <div className="flex mb-4">
+                {Array.from({ length: t.stars }).map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-5 h-5 text-blue-500 fill-current"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z" />
+                  </svg>
+                ))}
+              </div>
+
+              {/* Testimonial text */}
+              <p className="mb-6 font-lato text-base leading-relaxed">{t.text}</p>
+
+              {/* Author info */}
+              <div className="flex items-center gap-3">
+                <img
+                  src={t.img}
+                  alt={t.author}
+                  className="w-10 h-10 rounded-full object-cover border"
+                />
+                <div>
+                  <p className="font-bold">{t.author}</p>
+                  <p className="text-sm opacity-80">{t.role}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

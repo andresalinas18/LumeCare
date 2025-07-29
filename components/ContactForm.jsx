@@ -121,18 +121,22 @@ export default function ContactForm() {
             <input
               type="tel"
               name="phone"
+              id="phone"
               placeholder="Phone*"
               value={formData.phone}
               onChange={handleChange}
               required
+              autoComplete="tel"
               className="flex-1 px-4 py-3 rounded-full border border-[var(--color-text)] text-[var(--color-text)] placeholder-[var(--color-text)] bg-white focus:outline-none focus:ring-2 focus:ring-[#D4BO7F] text-sm"
             />
             <input
               type="email"
               name="email"
+              id="email"
               placeholder="Email"
               value={formData.email}
               onChange={handleChange}
+              autoComplete="email"
               className="flex-1 px-4 py-3 rounded-full border border-[var(--color-text)] text-[var(--color-text)] placeholder-[var(--color-text)] bg-white focus:outline-none focus:ring-2 focus:ring-[#D4BO7F] text-sm"
             />
           </div>
@@ -158,13 +162,14 @@ export default function ContactForm() {
           <div className="flex items-start text-sm text-gray-700">
             <input
               type="checkbox"
+              id="consent"
               name="consent"
               checked={formData.consent}
               onChange={handleChange}
               required
               className="mr-2 mt-1"
             />
-            <label>
+            <label htmlFor="consent">
               By completing this form, you are giving us permission to follow up
               by phone, email or text.
             </label>

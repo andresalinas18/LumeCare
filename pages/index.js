@@ -5,8 +5,10 @@ import About from '../components/About'
 import Step from "../components/JourneyMapSection"
 import Procedures from '../components/Procedures'
 import LumeCTA from '../components/LumeCareCTA'
+import Testimonials from '../components/TestimonialGrid'
 import ContactForm from "../components/ContactForm"
 import Footer from '../components/Footer'
+
 
 
 
@@ -38,6 +40,7 @@ export default function Home() {
         <Step />
         <Procedures />
         <LumeCTA />
+        <Testimonials />
         <ContactForm />
       </main>
 

@@ -36,7 +36,7 @@ export default function WhyCali() {
           loop
           muted
           playsInline
-          poster="/images/LiveThumbnail.jpg.png" 
+          poster="/images/LiveThumbnail.jpg" 
         />
 
         <div className="absolute inset-0 z-10 flex flex-col justify-center items-center px-4 text-white text-center">
@@ -91,18 +91,6 @@ export default function WhyCali() {
         </div>
       </section>
 
-      {/* === GALLERY GRID SECTION === */}
-      <section className="bg-white py-24 px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          viewport={{ once: true }}
-          className="max-w-7xl mx-auto"
-        >
-          <GalleryGrid />
-        </motion.div>
-      </section>
     </>
   );
 }

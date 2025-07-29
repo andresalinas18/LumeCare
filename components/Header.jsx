@@ -57,7 +57,7 @@ export default function Header() {
       <nav className="relative flex items-center h-[80px] px-6 justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <a href="#home" aria-label="LumeCare - Go to homepage" className="block h-full max-h-[4.5rem]">
+          <a href="#LumeCare" aria-label="LumeCare - Go to homepage" className="block h-full max-h-[4.5rem]">
             <Image
               src={LumeCareLogo}
               alt="LumeCare Homepage"

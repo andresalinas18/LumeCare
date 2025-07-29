@@ -1,0 +1,176 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "journey": "Your Journey",
+    "procedures": "Procedures",
+    "reviews": "Reviews",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "title": "Your Transformation, Guided with LumeCare.",
+    "description": "Discover world-class aesthetic results with the confidence of dedicated, personal support. LumeCare is your trusted partner for a safe and empowering medical journey in Cali, Colombia.",
+    "button": "Explore Our Procedures"
+  },
+  "about": {
+    "heading": "More Than an Agency. We're Your Partners in Transformation.",
+    "cards": [
+      {
+        "title": "Security First, Always.",
+        "text": "Your health is non-negotiable. We meticulously vet every credential and protocol to ensure your absolute safety."
+      },
+      {
+        "title": "Unwavering Trust.",
+        "text": "We build relationships on radical honesty and open communication, from your first chat to your follow-up."
+      },
+      {
+        "title": "True Empowerment.",
+        "text": "We provide clear, comprehensive information, giving you the power to make confident decisions about your body."
+      },
+      {
+        "title": "Absolute Transparency.",
+        "text": "No hidden fees. No surprises. We provide detailed, all-inclusive quotes so you know exactly what to expect."
+      }
+    ],
+    "missionIntro": "LumeCare wasn't created to be just another service. It was born from a deeply personal purpose: to make the dream of aesthetic transformation a reality that is safe, human, and truly empowering.",
+    "missionTitle": "Our Mission",
+    "missionText": "By building exclusive partnerships with board-certified specialists in Cali and dedicating ourselves to warm, personal support, we uphold an unwavering commitment to ethics, health, and your authentic beauty."
+  },
+    "journey": {
+    "title": "LumeCare",
+    "subtitle": "It's Breaking the rules",
+    "steps": [
+        {
+        "title": "The Consultation",
+        "description": "This is the beginning of our partnership. It starts with a warm, confidential conversation where we listen intently to your aspirations. We don't just hear you; we understand you. You'll finish this phase feeling heard, safe, and excited for what's to come."
+        },
+        {
+        "title": "The Blueprint",
+        "description": "Clarity is kindness. You will receive a meticulously detailed, all-inclusive plan that serves as your personal blueprint. It outlines everything—from procedure details to transparent pricing. We handle the complexities so you can approve your plan with absolute confidence."
+        },
+        {
+        "title": "The LumeCare Experience",
+        "description": "From the moment you land, you are under our care. Your procedure will be performed by a world-class specialist, and your recovery will be in a serene environment. Your only job is to focus on yourself. We handle the rest."
+        },
+        {
+        "title": "The Lifelong Commitment",
+        "description": "Our partnership doesn't end when you fly home—it evolves. Through virtual follow-ups, we celebrate your results and ensure your peace of mind. You return empowered, knowing you have a dedicated partner in your beauty and wellness for life."
+        }
+    ]
+    },
+  "procedures": {
+    "breast": {
+      "title": "Breast Procedures",
+      "description": "Our surgical team enhances the shape, size, and symmetry of your bust.",
+      "list": [
+        "Breast Augmentation",
+        "Implant-Free Augmentation",
+        "Breast Lift",
+        "Breast Reconstruction",
+        "Breast Reduction"
+      ]
+    },
+    "face": {
+      "title": "Facial Aesthetics",
+      "description": "Face procedures focus on enhancing symmetry and facial harmony.",
+      "list": [
+        "Facelift",
+        "Rhinoplasty",
+        "Blepharoplasty",
+        "Brow Lift"
+      ]
+    },
+    "body": {
+      "title": "Body Contouring",
+      "description": "We sculpt and contour the body for a more defined and confident appearance.",
+      "list": [
+        "Liposuction",
+        "Tummy Tuck",
+        "Brazilian Butt Lift"
+      ]
+    },
+    "oral": {
+      "title": "Oral Health",
+      "description": "Oral procedures for smile enhancement and dental health.",
+      "list": [
+        "Smile Design",
+        "Teeth Whitening",
+        "Dental Implants"
+      ]
+    },
+    "nonSurgical": {
+      "title": "Non-Surgical",
+      "description": "Minimally invasive treatments designed to enhance beauty and rejuvenation without downtime.",
+      "list": [
+        "Botox & Fillers",
+        "Facial Rejuvenation",
+        "Laser Treatments",
+        "Body Contouring"
+      ]
+    }
+  },
+  "lumeCareCTA": {
+    "phrases": [
+      { "first": "Live", "second": "empowered" },
+      { "first": "Live", "second": "confidently" },
+      { "first": "Live", "second": "beautifully" },
+      { "first": "Move", "second": "forward" },
+      { "first": "Move", "second": "freely" },
+      { "first": "Move", "second": "with purpose" }
+    ],
+    "cta": "Schedule an Online Consultation"
+  },
+  "testimonials": {
+    "title": "What Our Patients Say",
+    "reviews": [
+      {
+        "stars": 5,
+        "text": "Cali, Colombia is absolutely the best place for an aesthetic transformation. The city feels vibrant, welcoming, and the medical standards exceeded my expectations.",
+        "author": "Sarah M.",
+        "role": "Patient from USA"
+      },
+      {
+        "stars": 5,
+        "text": "The LumeCare team made me feel at home from the moment I arrived. Their warmth and care during my entire travel made the experience unforgettable.",
+        "author": "Sophie L.",
+        "role": "Patient from Canada"
+      },
+      {
+        "stars": 5,
+        "text": "Everything about my treatment was perfect. The associates were attentive, professional, and truly cared about my recovery and comfort.",
+        "author": "Theo R.",
+        "role": "Patient from UK"
+      },
+      {
+        "stars": 5,
+        "text": "I was nervous about traveling abroad for surgery, but LumeCare’s guidance made it smooth and safe. From airport pickup to aftercare, everything was seamless.",
+        "author": "Isabella S.",
+        "role": "Patient from Spain"
+      },
+      {
+        "stars": 5,
+        "text": "The attention to detail and personalized approach were incredible. I left Cali not only transformed physically but also emotionally renewed.",
+        "author": "Michael T.",
+        "role": "Patient from USA"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let’s talk about your journey",
+    "description": "Fill out the form and one of our LumeCare specialists will get in touch to help you take the first step toward your transformation.",
+    "form": {
+      "firstName": "First Name*",
+      "lastName": "Last Name*",
+      "phone": "Phone*",
+      "email": "Email",
+      "procedure": "Procedure of Interest",
+      "comments": "Comments",
+      "consentText": "By completing this form, you are giving us permission to follow up by phone, email or text.",
+      "submit": "Submit",
+      "successMessage": "Your form has been submitted successfully!"
+    }
+  },
+  "footer": {
+    "rights": "© 2025 LumeCare. All rights reserved."
+  }
+}

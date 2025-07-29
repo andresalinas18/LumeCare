@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "journey": "Votre Parcours",
+    "procedures": "Procédures",
+    "reviews": "Avis",
+    "contact": "Contactez-nous"
+  },
+  "hero": {
+    "title": "Votre transformation, guidée par LumeCare.",
+    "subtitle": "Découvrez des résultats esthétiques de classe mondiale avec la confiance d’un accompagnement personnel et dédié. LumeCare est votre partenaire de confiance pour un voyage médical sûr et valorisant à Cali, en Colombie.",
+    "cta": "Explorez Nos Procédures"
+  }
+}

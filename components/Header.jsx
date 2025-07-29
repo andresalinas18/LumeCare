@@ -96,7 +96,7 @@ export default function Header() {
             <ul className="flex flex-col gap-4 text-center">
               <li><a href="#LumeCare" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">Home</a></li>
               <li><a href="#about" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">About</a></li>
-              <li><a href="#stepByStep" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">The LumeCare Journey</a></li>
+              <li><a href="#yourJourney" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">The LumeCare Journey</a></li>
               <li><a href="#procedures" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">Procedures</a></li>
               <li><a href="#reviews" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">Reviews</a></li>
               <li>

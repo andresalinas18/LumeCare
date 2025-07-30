@@ -2,10 +2,10 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import About from '../components/About'
-import Step from "../components/JourneyMapSection"
+import JourneyMapSection from "../components/JourneyMapSection"
 import Procedures from '../components/Procedures'
-import LumeCTA from '../components/LumeCareCTA'
-import Testimonials from '../components/TestimonialGrid'
+import LumeCareCTA from '../components/LumeCareCTA'
+import TestimonialGrid from '../components/TestimonialGrid'
 import ContactForm from "../components/ContactForm"
 import Footer from '../components/Footer'
 
@@ -37,10 +37,10 @@ export default function Home() {
       <main id="main" aria-label="LumeCare main content">
         <Hero />
         <About />
-        <Step />
+        <JourneyMapSection />
         <Procedures />
-        <LumeCTA />
-        <Testimonials />
+        <LumeCareCTA />
+        <TestimonialGrid />
         <ContactForm />
       </main>
 

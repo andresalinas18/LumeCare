@@ -46,7 +46,7 @@ const testimonials = [
   },
 ];
 
-export default function Testimonials() {
+export default function TestimonialGrid() {
   return (
     <section id="reviews" className="py-20 bg-background className=scroll-mt-[100px]">
       <div className="max-w-6xl mx-auto px-4">

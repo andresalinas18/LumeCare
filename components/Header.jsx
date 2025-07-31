@@ -59,8 +59,10 @@ export default function Header() {
         <div className="flex items-center">
           <a href="#LumeCare" aria-label="LumeCare - Go to homepage" className="block h-full max-h-[4.5rem]">
             <Image
-              src={LumeCareLogo}
+              src="/images/LumeCareLogo.svg"
               alt="LumeCare Homepage"
+              width={120}
+              height={40}
               priority
               className="h-full w-auto max-h-[4.5rem] transition-transform duration-300 hover:scale-[1.05]"
             />

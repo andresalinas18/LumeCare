@@ -8,9 +8,7 @@ import LumeCareCTA from '../components/LumeCareCTA'
 import TestimonialGrid from '../components/TestimonialGrid'
 import ContactForm from "../components/ContactForm"
 import Footer from '../components/Footer'
-
-
-
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 
 export default function Home() {
@@ -48,4 +46,12 @@ export default function Home() {
       <Footer />
     </>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }

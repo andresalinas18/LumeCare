@@ -184,7 +184,23 @@
         "bg": "bg-purple-200 text-black"
       }
     ]
-  }
+  },
+  "contact": {
+  "title": "Hablemos sobre tu viaje",
+  "description": "Completa el formulario y uno de nuestros especialistas de LumeCare se pondrá en contacto para ayudarte a dar el primer paso hacia tu transformación.",
+  "firstName": "Nombre*",
+  "lastName": "Apellido*",
+  "phone": "Teléfono*",
+  "email": "Correo",
+  "procedure": "Procedimiento de interés",
+  "comments": "Comentarios",
+  "consent": "Al completar este formulario, nos das permiso para contactarte por teléfono, correo o mensaje de texto.",
+  "submit": "Enviar",
+  "alertConsent": "Por favor acepta los términos antes de enviar.",
+  "error": "Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.",
+  "success": "¡Tu formulario ha sido enviado exitosamente!"
+}
+
 
 
 

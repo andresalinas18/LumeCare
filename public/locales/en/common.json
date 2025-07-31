@@ -183,7 +183,23 @@
         "bg": "bg-purple-200 text-black"
       }
     ]
-  }
+  },
+  "contact": {
+  "title": "Let’s talk about your journey",
+  "description": "Fill out the form and one of our LumeCare specialists will get in touch to help you take the first step toward your transformation.",
+  "firstName": "First Name*",
+  "lastName": "Last Name*",
+  "phone": "Phone*",
+  "email": "Email",
+  "procedure": "Procedure of Interest",
+  "comments": "Comments",
+  "consent": "By completing this form, you are giving us permission to follow up by phone, email or text.",
+  "submit": "Submit",
+  "alertConsent": "Please accept the terms before submitting.",
+  "error": "There was an error sending the message. Please try again.",
+  "success": "Your form has been submitted successfully!"
+}
+
 
 
 

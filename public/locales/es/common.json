@@ -138,7 +138,54 @@
       { "first": "Muévete", "second": "con propósito" }
     ],
     "button": "Agenda una Consulta en Línea"
+  },
+  
+  "testimonials": {
+    "title": "Lo que dicen nuestros pacientes",
+    "items": [
+      {
+        "stars": 5,
+        "text": "Cali, Colombia es absolutamente el mejor lugar para una transformación estética. La ciudad se siente vibrante, acogedora y los estándares médicos superaron mis expectativas.",
+        "author": "Sarah M.",
+        "role": "Paciente de EE.UU.",
+        "img": "/images/testimonials/isabella.jpg",
+        "bg": "bg-white text-black"
+      },
+      {
+        "stars": 5,
+        "text": "El equipo de LumeCare me hizo sentir como en casa desde el momento en que llegué. Su calidez y cuidado durante todo mi viaje hicieron que la experiencia fuera inolvidable.",
+        "author": "Sophie L.",
+        "role": "Paciente de Canadá",
+        "img": "/images/testimonials/sophie.jpg",
+        "bg": "bg-purple-100 text-black"
+      },
+      {
+        "stars": 5,
+        "text": "Todo sobre mi tratamiento fue perfecto. Los asociados fueron atentos, profesionales y realmente se preocuparon por mi recuperación y comodidad.",
+        "author": "Theo R.",
+        "role": "Paciente del Reino Unido",
+        "img": "/images/testimonials/daniel.jpg",
+        "bg": "bg-black text-white"
+      },
+      {
+        "stars": 5,
+        "text": "Estaba nerviosa por viajar al extranjero para una cirugía, pero la guía de LumeCare lo hizo sencillo y seguro. Desde la recogida en el aeropuerto hasta el postoperatorio, todo fue impecable.",
+        "author": "Isabella S.",
+        "role": "Paciente de España",
+        "img": "/images/testimonials/caroline.jpg",
+        "bg": "bg-white text-black"
+      },
+      {
+        "stars": 5,
+        "text": "La atención al detalle y el enfoque personalizado fueron increíbles. Me fui de Cali no solo transformado físicamente sino también renovado emocionalmente.",
+        "author": "Michael T.",
+        "role": "Paciente de EE.UU.",
+        "img": "/images/testimonials/michael.jpg",
+        "bg": "bg-purple-200 text-black"
+      }
+    ]
   }
+
 
 
 

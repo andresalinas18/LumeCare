@@ -138,6 +138,53 @@
       { "first": "Move", "second": "with purpose" }
     ],
     "button": "Schedule an Online Consultation"
+  },
+  "testimonials": {
+    "title": "What Our Patients Say",
+    "items": [
+      {
+        "stars": 5,
+        "text": "Cali, Colombia is absolutely the best place for an aesthetic transformation. The city feels vibrant, welcoming, and the medical standards exceeded my expectations.",
+        "author": "Sarah M.",
+        "role": "Patient from USA",
+        "img": "/images/testimonials/isabella.jpg",
+        "bg": "bg-white text-black"
+      },
+      {
+        "stars": 5,
+        "text": "The LumeCare team made me feel at home from the moment I arrived. Their warmth and care during my entire travel made the experience unforgettable.",
+        "author": "Sophie L.",
+        "role": "Patient from Canada",
+        "img": "/images/testimonials/sophie.jpg",
+        "bg": "bg-purple-100 text-black"
+      },
+      {
+        "stars": 5,
+        "text": "Everything about my treatment was perfect. The associates were attentive, professional, and truly cared about my recovery and comfort.",
+        "author": "Theo R.",
+        "role": "Patient from UK",
+        "img": "/images/testimonials/daniel.jpg",
+        "bg": "bg-black text-white"
+      },
+      {
+        "stars": 5,
+        "text": "I was nervous about traveling abroad for surgery, but LumeCare’s guidance made it smooth and safe. From airport pickup to aftercare, everything was seamless.",
+        "author": "Isabella S.",
+        "role": "Patient from Spain",
+        "img": "/images/testimonials/caroline.jpg",
+        "bg": "bg-white text-black"
+      },
+      {
+        "stars": 5,
+        "text": "The attention to detail and personalized approach were incredible. I left Cali not only transformed physically but also emotionally renewed.",
+        "author": "Michael T.",
+        "role": "Patient from USA",
+        "img": "/images/testimonials/michael.jpg",
+        "bg": "bg-purple-200 text-black"
+      }
+    ]
   }
+
+
 
 }

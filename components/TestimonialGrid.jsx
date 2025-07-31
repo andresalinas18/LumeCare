@@ -1,57 +1,17 @@
 // /components/TestimonialGrid.jsx
 
-"use client";
 import { motion } from "framer-motion";
-
-const testimonials = [
-  {
-    stars: 5,
-    text: "Cali, Colombia is absolutely the best place for an aesthetic transformation. The city feels vibrant, welcoming, and the medical standards exceeded my expectations.",
-    author: "Sarah M.",
-    role: "Patient from USA",
-    img: "/images/testimonials/isabella.jpg",
-    bg: "bg-white text-black",
-  },
-  {
-    stars: 5,
-    text: "The LumeCare team made me feel at home from the moment I arrived. Their warmth and care during my entire travel made the experience unforgettable.",
-    author: "Sophie L.",
-    role: "Patient from Canada",
-    img: "/images/testimonials/sophie.jpg",
-    bg: "bg-purple-100 text-black",
-  },
-  {
-    stars: 5,
-    text: "Everything about my treatment was perfect. The associates were attentive, professional, and truly cared about my recovery and comfort.",
-    author: "Theo R.",
-    role: "Patient from UK",
-    img: "/images/testimonials/daniel.jpg",
-    bg: "bg-black text-white",
-  },
-  {
-    stars: 5,
-    text: "I was nervous about traveling abroad for surgery, but LumeCare’s guidance made it smooth and safe. From airport pickup to aftercare, everything was seamless.",
-    author: "Isabella S.",
-    role: "Patient from Spain",
-    img: "/images/testimonials/caroline.jpg",
-    bg: "bg-white text-black",
-  },
-  {
-    stars: 5,
-    text: "The attention to detail and personalized approach were incredible. I left Cali not only transformed physically but also emotionally renewed.",
-    author: "Michael T.",
-    role: "Patient from USA",
-    img: "/images/testimonials/michael.jpg",
-    bg: "bg-purple-200 text-black",
-  },
-];
+import { useTranslation } from "next-i18next";
 
 export default function TestimonialGrid() {
+  const { t } = useTranslation("common");
+  const testimonials = t("testimonials.items", { returnObjects: true });
+
   return (
-    <section id="reviews" className="py-20 bg-background className=scroll-mt-[100px]">
+    <section id="reviews" className="py-20 bg-background scroll-mt-[100px]">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-center text-3xl sm:text-4xl font-lora italic mb-12">
-          What Our Patients Say
+          {t("testimonials.title")}
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -100,3 +60,4 @@ export default function TestimonialGrid() {
     </section>
   );
 }
+

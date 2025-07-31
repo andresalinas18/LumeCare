@@ -36,6 +36,28 @@
   "missionIntro": "LumeCare no fue creada para ser solo otro servicio. Nació de un propósito profundamente personal: hacer realidad el sueño de una transformación estética segura, humana y verdaderamente empoderadora.",
   "missionTitle": "Nuestra Misión",
   "missionText": "Al construir alianzas exclusivas con especialistas certificados en Cali y dedicarnos a un apoyo cálido y personal, mantenemos un compromiso inquebrantable con la ética, la salud y tu belleza auténtica."
-}
+},
+  "journey": {
+    "title": "LumeCare",
+    "subtitle": "Rompiendo las reglas",
+    "steps": [
+      {
+        "title": "La Consulta: Donde Entendemos tu Visión",
+        "description": "Este es el inicio de nuestra alianza. Comienza con una conversación cálida y confidencial donde escuchamos atentamente tus aspiraciones. No solo te oímos; te entendemos. Terminarás esta fase sintiéndote escuchada, segura y emocionada por lo que viene."
+      },
+      {
+        "title": "El Plano: Claridad y Confianza en el Diseño",
+        "description": "La claridad es amabilidad. Recibirás un plan detallado y todo incluido que será tu guía personal. Describe todo—desde los detalles del procedimiento hasta los costos transparentes. Nos encargamos de las complejidades para que apruebes tu plan con total confianza."
+      },
+      {
+        "title": "La Experiencia LumeCare: Apoyo Inquebrantable en Cali",
+        "description": "Desde el momento en que aterrizas, estás bajo nuestro cuidado. Tu procedimiento será realizado por un especialista de clase mundial y tu recuperación será en un entorno sereno. Tu único trabajo es enfocarte en ti. Nosotros nos encargamos del resto."
+      },
+      {
+        "title": "El Compromiso de por Vida: Más Allá de tu Regreso a Casa",
+        "description": "Nuestra alianza no termina cuando vuelves a casa—evoluciona. A través de seguimientos virtuales, celebramos tus resultados y aseguramos tu tranquilidad. Regresas empoderada, sabiendo que tienes un socio dedicado a tu belleza y bienestar de por vida."
+      }
+    ]
+  }
 
 }

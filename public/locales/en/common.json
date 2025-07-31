@@ -12,5 +12,52 @@
     "procedures": "Procedures",
     "reviews": "Reviews",
     "contact": "Contact Us"
+  },
+  "about": {
+  "heading": "More Than an Agency.\nWe're Your Partners in Transformation.",
+  "cards": [
+    {
+      "title": "Security First, Always.",
+      "text": "Your health is non-negotiable. We meticulously vet every credential and protocol to ensure your absolute safety."
+    },
+    {
+      "title": "Unwavering Trust.",
+      "text": "We build relationships on radical honesty and open communication, from your first chat to your follow-up."
+    },
+    {
+      "title": "True Empowerment.",
+      "text": "We provide clear, comprehensive information, giving you the power to make confident decisions about your body."
+    },
+    {
+      "title": "Absolute Transparency.",
+      "text": "No hidden fees. No surprises. We provide detailed, all-inclusive quotes so you know exactly what to expect."
+    }
+  ],
+  "missionIntro": "LumeCare wasn't created to be just another service. It was born from a deeply personal purpose: to make the dream of aesthetic transformation a reality that is safe, human, and truly empowering.",
+  "missionTitle": "Our Mission",
+  "missionText": "By building exclusive partnerships with board-certified specialists in Cali and dedicating ourselves to warm, personal support, we uphold an unwavering commitment to ethics, health, and your authentic beauty."
+},
+  "journey": {
+    "title": "LumeCare",
+    "subtitle": "It's Breaking the rules",
+    "steps": [
+      {
+        "title": "The Consultation: Where Your Vision is Understood",
+        "description": "This is the beginning of our partnership. It starts with a warm, confidential conversation where we listen intently to your aspirations. We don't just hear you; we understand you. You'll finish this phase feeling heard, safe, and excited for what's to come."
+      },
+      {
+        "title": "The Blueprint: Clarity and Confidence by Design",
+        "description": "Clarity is kindness. You will receive a meticulously detailed, all-inclusive plan that serves as your personal blueprint. It outlines everything—from procedure details to transparent pricing. We handle the complexities so you can approve your plan with absolute confidence."
+      },
+      {
+        "title": "The LumeCare Experience: Unwavering Support in Cali",
+        "description": "From the moment you land, you are under our care. Your procedure will be performed by a world-class specialist, and your recovery will be in a serene environment. Your only job is to focus on yourself. We handle the rest."
+      },
+      {
+        "title": "The Lifelong Commitment: Beyond Your Return Home",
+        "description": "Our partnership doesn't end when you fly home—it evolves. Through virtual follow-ups, we celebrate your results and ensure your peace of mind. You return empowered, knowing you have a dedicated partner in your beauty and wellness for life."
+      }
+    ]
   }
+
 }

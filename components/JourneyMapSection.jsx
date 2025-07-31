@@ -1,8 +1,6 @@
 // /components/JourneyMapSection.jsx
-
-"use client";
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import DesktopJourney from "./StepScrollSection/DesktopJourney";
 import MobileJourney from "./StepScrollSection/MobileJourney";
 
@@ -45,8 +43,8 @@ export default function JourneyMapSection() {
         <div className="hidden lg:block relative h-full w-full">
           <DesktopJourney {...animations} />
         </div>
-        
-        {/* Movil */}
+
+        {/* Mobile */}
         <div className="lg:hidden relative h-full w-full">
           <MobileJourney {...animations} />
         </div>

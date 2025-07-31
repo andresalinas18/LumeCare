@@ -58,6 +58,76 @@
         "description": "Our partnership doesn't end when you fly home—it evolves. Through virtual follow-ups, we celebrate your results and ensure your peace of mind. You return empowered, knowing you have a dedicated partner in your beauty and wellness for life."
       }
     ]
-  }
+  },
+  "procedures": {
+  "ariaLabel": "Our Medical Procedures",
+  "items": [
+    {
+      "name": "breast",
+      "image": "/images/breast.webp",
+      "alt": "Breast procedure",
+      "title": "Breast Procedures",
+      "description": "Our surgical team enhances the shape, size, and symmetry of your bust.",
+      "list": [
+        "Breast Augmentation",
+        "Implant-Free Augmentation",
+        "Breast Lift",
+        "Breast Reconstruction",
+        "Breast Reduction"
+      ]
+    },
+    {
+      "name": "face",
+      "image": "/images/face.webp",
+      "alt": "Facial aesthetics procedure",
+      "title": "Facial Aesthetics",
+      "description": "Face procedures focus on enhancing symmetry and facial harmony.",
+      "list": [
+        "Facelift",
+        "Rhinoplasty",
+        "Blepharoplasty",
+        "Brow Lift"
+      ]
+    },
+    {
+      "name": "body",
+      "image": "/images/body.webp",
+      "alt": "Body contouring procedure",
+      "title": "Body Contouring",
+      "description": "We sculpt and contour the body for a more defined and confident appearance.",
+      "list": [
+        "Liposuction",
+        "Tummy Tuck",
+        "Brazilian Butt Lift"
+      ]
+    },
+    {
+      "name": "oral Health",
+      "image": "/images/smileFace.webp",
+      "alt": "Oral and dental procedures",
+      "title": "Oral Health",
+      "description": "Oral procedures for smile enhancement and dental health.",
+      "list": [
+        "Smile Design",
+        "Teeth Whitening",
+        "Dental Implants"
+      ]
+    },
+    {
+      "name": "non-surgical",
+      "image": "/images/non-surgical.webp",
+      "alt": "Non-surgical aesthetics procedures",
+      "title": "Non-Surgical",
+      "description": "Minimally invasive treatments designed to enhance beauty and rejuvenation without downtime.",
+      "list": [
+        "Botox & Fillers",
+        "Facial Rejuvenation",
+        "Laser Treatments",
+        "Body Contouring"
+      ]
+    }
+  ]
+}
+
 
 }

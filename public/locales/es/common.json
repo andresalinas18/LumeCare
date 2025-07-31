@@ -58,6 +58,76 @@
         "description": "Nuestra alianza no termina cuando vuelves a casa—evoluciona. A través de seguimientos virtuales, celebramos tus resultados y aseguramos tu tranquilidad. Regresas empoderada, sabiendo que tienes un socio dedicado a tu belleza y bienestar de por vida."
       }
     ]
-  }
+  },
+  "procedures": {
+  "ariaLabel": "Nuestros Procedimientos Médicos",
+  "items": [
+    {
+      "name": "Busto",
+      "image": "/images/breast.webp",
+      "alt": "Procedimiento de senos",
+      "title": "Procedimientos de Senos",
+      "description": "Nuestro equipo quirúrgico mejora la forma, tamaño y simetría de tu busto.",
+      "list": [
+        "Aumento de Senos",
+        "Aumento sin Implantes",
+        "Levantamiento de Senos",
+        "Reconstrucción Mamaria",
+        "Reducción Mamaria"
+      ]
+    },
+    {
+      "name": "rostro",
+      "image": "/images/face.webp",
+      "alt": "Procedimientos faciales",
+      "title": "Estética Facial",
+      "description": "Los procedimientos faciales mejoran la simetría y armonía del rostro.",
+      "list": [
+        "Lifting Facial",
+        "Rinoplastia",
+        "Blefaroplastia",
+        "Lifting de Cejas"
+      ]
+    },
+    {
+      "name": "cuerpo",
+      "image": "/images/body.webp",
+      "alt": "Moldeado corporal",
+      "title": "Contorno Corporal",
+      "description": "Esculpimos y definimos el cuerpo para una apariencia más segura y estilizada.",
+      "list": [
+        "Liposucción",
+        "Abdominoplastia",
+        "Levantamiento de Glúteos Brasileño"
+      ]
+    },
+    {
+      "name": "Salud oral",
+      "image": "/images/smileFace.webp",
+      "alt": "Procedimientos orales y dentales",
+      "title": "Salud Oral",
+      "description": "Procedimientos orales para mejorar tu sonrisa y salud dental.",
+      "list": [
+        "Diseño de Sonrisa",
+        "Blanqueamiento Dental",
+        "Implantes Dentales"
+      ]
+    },
+    {
+      "name": "no-quirúrgico",
+      "image": "/images/non-surgical.webp",
+      "alt": "Procedimientos estéticos no quirúrgicos",
+      "title": "No Quirúrgicos",
+      "description": "Tratamientos mínimamente invasivos para rejuvenecer y embellecer sin tiempo de recuperación.",
+      "list": [
+        "Botox y Rellenos",
+        "Rejuvenecimiento Facial",
+        "Tratamientos con Láser",
+        "Contorno Corporal"
+      ]
+    }
+  ]
+}
+
 
 }

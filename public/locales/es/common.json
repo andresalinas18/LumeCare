@@ -12,5 +12,30 @@
     "procedures": "Procedimientos",
     "reviews": "Reseñas",
     "contact": "Contáctanos"
-  }
+  },
+  "about": {
+  "heading": "Más que una Agencia.\nSomos tus Socios en Transformación.",
+  "cards": [
+    {
+      "title": "Seguridad Ante Todo.",
+      "text": "Tu salud no es negociable. Verificamos meticulosamente cada credencial y protocolo para garantizar tu seguridad absoluta."
+    },
+    {
+      "title": "Confianza Inquebrantable.",
+      "text": "Construimos relaciones basadas en honestidad radical y comunicación abierta, desde tu primer contacto hasta el seguimiento."
+    },
+    {
+      "title": "Verdadero Empoderamiento.",
+      "text": "Proporcionamos información clara y completa, dándote el poder de tomar decisiones seguras sobre tu cuerpo."
+    },
+    {
+      "title": "Transparencia Absoluta.",
+      "text": "Sin costos ocultos. Sin sorpresas. Te damos presupuestos detallados y todo incluido para que sepas exactamente qué esperar."
+    }
+  ],
+  "missionIntro": "LumeCare no fue creada para ser solo otro servicio. Nació de un propósito profundamente personal: hacer realidad el sueño de una transformación estética segura, humana y verdaderamente empoderadora.",
+  "missionTitle": "Nuestra Misión",
+  "missionText": "Al construir alianzas exclusivas con especialistas certificados en Cali y dedicarnos a un apoyo cálido y personal, mantenemos un compromiso inquebrantable con la ética, la salud y tu belleza auténtica."
+}
+
 }

@@ -4,5 +4,13 @@
     "description": "Descubre resultados estéticos de clase mundial con la confianza de un acompañamiento dedicado y personal. LumeCare es tu socio de confianza para un viaje médico seguro y empoderador en Cali, Colombia.",
     "cta": "Explora Nuestros Procedimientos",
     "cta_aria": "Explora nuestros procedimientos estéticos"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "journey": "Tu Viaje",
+    "procedures": "Procedimientos",
+    "reviews": "Reseñas",
+    "contact": "Contáctanos"
   }
 }

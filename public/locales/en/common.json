@@ -1,8 +1,16 @@
 {
   "hero": {
-    "title": "Your Transformation, \nGuided with LumeCare.",
+    "title": "Your Transformation, Guided with LumeCare.",
     "description": "Discover world-class aesthetic results with the confidence of dedicated, personal support. LumeCare is your trusted partner for a safe and empowering medical journey in Cali, Colombia.",
     "cta": "Explore Our Procedures",
     "cta_aria": "Explore our aesthetic procedures"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "journey": "Your Journey",
+    "procedures": "Procedures",
+    "reviews": "Reviews",
+    "contact": "Contact Us"
   }
 }

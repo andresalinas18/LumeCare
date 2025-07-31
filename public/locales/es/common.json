@@ -127,7 +127,19 @@
       ]
     }
   ]
-}
+},
+  "cta": {
+    "phrases": [
+      { "first": "Vive", "second": "empoderada" },
+      { "first": "Vive", "second": "con confianza" },
+      { "first": "Vive", "second": "hermosamente" },
+      { "first": "Muévete", "second": "hacia adelante" },
+      { "first": "Muévete", "second": "libremente" },
+      { "first": "Muévete", "second": "con propósito" }
+    ],
+    "button": "Agenda una Consulta en Línea"
+  }
+
 
 
 }

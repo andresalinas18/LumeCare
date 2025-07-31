@@ -127,7 +127,17 @@
       ]
     }
   ]
-}
-
+},
+  "cta": {
+    "phrases": [
+      { "first": "Live", "second": "empowered" },
+      { "first": "Live", "second": "confidently" },
+      { "first": "Live", "second": "beautifully" },
+      { "first": "Move", "second": "forward" },
+      { "first": "Move", "second": "freely" },
+      { "first": "Move", "second": "with purpose" }
+    ],
+    "button": "Schedule an Online Consultation"
+  }
 
 }

@@ -85,7 +85,7 @@ export default function Header() {
 
         {/* Right Side Buttons */}
         <div className="hidden lg:flex items-center gap-3">
-          {/* Botón para cambiar idioma */}
+          {/* Language Button */}
           <button
             onClick={changeLanguage}
             className="px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-md hover:bg-gray-100 transition"
@@ -127,7 +127,7 @@ export default function Header() {
                   {t('nav.contact')}
                 </a>
               </li>
-              {/* language button mobile menu */}
+              {/* Language Button mobile menu */}
               <li>
                 <button
                   onClick={() => {

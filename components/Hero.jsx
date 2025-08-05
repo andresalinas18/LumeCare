@@ -7,7 +7,6 @@ export default function Hero() {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const videoRef = useRef(null);
 
-  // Evita hydration error: renderiza traducciones solo en cliente
   useEffect(() => {
 
     if (videoRef.current) {

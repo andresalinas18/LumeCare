@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
+import ReactGA from "react-ga4";
 
 export default function Header() {
   const { t } = useTranslation('common');
@@ -16,7 +17,6 @@ export default function Header() {
       setIsVisible(true);
       return;
     }
-
     const currentScrollY = window.scrollY;
     if (currentScrollY > lastScrollY && currentScrollY > 100) {
       setIsVisible(false);
@@ -83,7 +83,7 @@ export default function Header() {
           </ul>
         </div>
 
-        {/* Right Side Buttons */}
+        {/* Right Side - Desktop */}
         <div className="hidden lg:flex items-center gap-3">
           {/* Language Button */}
           <button
@@ -96,22 +96,52 @@ export default function Header() {
           {/* Contact Button */}
           <a
             href="#contact"
-            onClick={handleLinkClick}
+            onClick={(e) => {
+              handleLinkClick(e);
+              if (process.env.NODE_ENV === "production") {
+                ReactGA.event({
+                  category: "conversion",
+                  action: "click_contact_button",
+                  label: "nav_contact"
+                });
+              }
+            }}
             className="inline-block px-6 py-2 text-white font-bold text-[0.9rem] uppercase tracking-[1px] bg-primary rounded-[5px] no-underline transition duration-300 ease-in-out hover:bg-primary-dark hover:-translate-y-[2px]"
           >
             {t('nav.contact')}
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden text-3xl"
-          onClick={toggleMenu}
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={isMenuOpen}
-        >
-          {isMenuOpen ? '✕' : '☰'}
-        </button>
+        {/* Right Side - Mobile */}
+        <div className="flex items-center gap-3 lg:hidden">
+          {/* Contact Button Mobile */}
+          <a
+            href="#contact"
+            onClick={(e) => {
+              handleLinkClick(e);
+              if (process.env.NODE_ENV === "production") {
+                ReactGA.event({
+                  category: "conversion",
+                  action: "click_contact_button",
+                  label: "nav_contact_mobile"
+                });
+              }
+            }}
+            className="inline-block px-4 py-2 text-white font-bold text-[0.8rem] uppercase tracking-[1px] bg-primary rounded-[5px] no-underline transition duration-300 ease-in-out hover:bg-primary-dark hover:-translate-y-[2px]"
+          >
+            {t('nav.contact')}
+          </a>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="text-3xl"
+            onClick={toggleMenu}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+          >
+            {isMenuOpen ? '✕' : '☰'}
+          </button>
+        </div>
 
         {/* Mobile Menu Panel */}
         {isMenuOpen && (
@@ -122,11 +152,6 @@ export default function Header() {
               <li><a href="#yourJourney" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">{t('nav.journey')}</a></li>
               <li><a href="#procedures" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">{t('nav.procedures')}</a></li>
               <li><a href="#reviews" onClick={handleLinkClick} className="text-text text-base font-normal hover:text-primary">{t('nav.reviews')}</a></li>
-              <li>
-                <a href="#contact" onClick={handleLinkClick} className="inline-block w-full text-center px-6 py-2 text-white font-bold text-[0.9rem] uppercase tracking-[1px] bg-primary rounded-[5px] transition duration-300 hover:bg-primary-dark">
-                  {t('nav.contact')}
-                </a>
-              </li>
               {/* Language Button mobile menu */}
               <li>
                 <button

@@ -1,10 +1,19 @@
 import "../styles/globals.css";
 import { appWithTranslation } from "next-i18next";
 import { useEffect } from "react";
+import ReactGA from "react-ga4";
+
+
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     if (typeof window !== "undefined" && process.env.NODE_ENV === "production") {
+      
+      // Google Analytics
+      ReactGA.initialize("G-9W4D2SEFLD");
+      ReactGA.send("pageview");
+
+      // Microsoft Clarity
       (function (c, l, a, r, i, t, y) {
         c[a] =
           c[a] ||

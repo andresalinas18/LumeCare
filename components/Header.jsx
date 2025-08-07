@@ -117,13 +117,12 @@ export default function Header() {
           {/* Contact Button Mobile */}
           <a
             href="#contact"
+            id="contact-us-button" // ← AGREGA ESTA LÍNEA
             onClick={(e) => {
               handleLinkClick(e);
               if (process.env.NODE_ENV === "production") {
-                ReactGA.event({
-                  category: "conversion",
-                  action: "click_contact_button",
-                  label: "nav_contact_mobile"
+                window.dataLayer.push({
+                  event: "contact_button_click"
                 });
               }
             }}

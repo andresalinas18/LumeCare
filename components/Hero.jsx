@@ -1,5 +1,4 @@
 import { useTranslation } from "next-i18next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Hero() {
   const { t } = useTranslation("common");
@@ -58,8 +57,6 @@ export default function Hero() {
         </a>
       </div>
 
-      {/* Speed Insights only in production */}
-      {isProduction && <SpeedInsights />}
     </section>
   );
 }

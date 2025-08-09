@@ -3,8 +3,6 @@ import { appWithTranslation } from "next-i18next";
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
 
-
-
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     if (typeof window !== "undefined" && process.env.NODE_ENV === "production") {
@@ -33,5 +31,4 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default appWithTranslation(MyApp);
-
 

@@ -1,7 +1,9 @@
 import { useTranslation } from "next-i18next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Hero() {
   const { t } = useTranslation("common");
+  const isProduction = process.env.NODE_ENV === "production";
 
   return (
     <section
@@ -18,10 +20,18 @@ export default function Hero() {
           muted
           playsInline
           poster="/images/Fallback.png"
-          onCanPlayThrough={(e) => e.currentTarget.classList.replace("opacity-0", "opacity-100")}
+          onCanPlayThrough={(e) =>
+            e.currentTarget.classList.replace("opacity-0", "opacity-100")
+          }
         >
-          <source src="/videos/Videolumecareportada.webm" type='video/webm; codecs="vp9"' />
-          <source src="/videos/Videolumecareportada.mp4" type="video/mp4" />
+          <source
+            src="/videos/Videolumecareportada.webm"
+            type='video/webm; codecs="vp9"'
+          />
+          <source
+            src="/videos/Videolumecareportada.mp4"
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -47,6 +57,9 @@ export default function Hero() {
           {t("hero.cta")}
         </a>
       </div>
+
+      {/* Speed Insights only in production */}
+      {isProduction && <SpeedInsights />}
     </section>
   );
 }

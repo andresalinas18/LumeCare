@@ -3,17 +3,15 @@ import { useTranslation } from "next-i18next";
 
 export default function Hero() {
   const { t } = useTranslation("common");
-  const [mounted, setMounted] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const videoRef = useRef(null);
 
   useEffect(() => {
-
     if (videoRef.current) {
       const playPromise = videoRef.current.play();
       if (playPromise !== undefined) {
         playPromise.catch(err => {
-          console.warn("Autoplay blocked, waiting for user interaction:", err);
+          console.warn("Autoplay blocked:", err);
         });
       }
     }
@@ -28,18 +26,21 @@ export default function Hero() {
       <div className="absolute inset-0 z-10">
         <video
           ref={videoRef}
-          className={`absolute inset-0 w-full h-full object-none md:object-cover transition-opacity duration-700 ${
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
             videoLoaded ? "opacity-100" : "opacity-0"
           }`}
-          preload="auto"
+          preload="none" 
           autoPlay
           loop
           muted
           playsInline
           poster="/images/Fallback.png"
-          src="/videos/Videolumecareportada.mp4"
           onLoadedData={() => setVideoLoaded(true)}
+          aria-hidden="true"
+          role="presentation"
         >
+          <source src="/videos/Videolumecareportada.webm" type="video/webm" />
+          <source src="/videos/Videolumecareportada.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -58,7 +59,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-30 text-white text-center px-5">
-        <h1 className="text-[2.5rem] text-white sm:text-[3rem] md:text-[4rem] lg:text-[4.5rem] font-lora font-medium italic whitespace-pre-line leading-[1.1] mb-6">
+        <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] lg:text-[4.5rem] font-lora font-medium italic whitespace-pre-line leading-[1.1] mb-6">
           {t("hero.title")}
         </h1>
         <p className="text-base sm:text-lg md:text-[1.3rem] max-w-[700px] mx-auto mb-8 font-lora font-medium italic opacity-95">

@@ -121,9 +121,11 @@ export default function Header() {
             onClick={(e) => {
               handleLinkClick(e);
               if (process.env.NODE_ENV === "production") {
-                window.dataLayer.push({
-                  event: "contact_button_click"
-                });
+                if (window.dataLayer) {
+                  window.dataLayer.push({
+                    event: "contact_button_click"
+                  });
+                }
               }
             }}
             className="inline-block px-4 py-2 text-white font-bold text-[0.8rem] uppercase tracking-[1px] bg-primary rounded-[5px] no-underline transition duration-300 ease-in-out hover:bg-primary-dark hover:-translate-y-[2px]"

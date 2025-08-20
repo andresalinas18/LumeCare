@@ -72,12 +72,12 @@ export default function About() {
                 className="relative w-full h-80 rounded-2xl overflow-hidden bg-cover bg-center shadow-lg transition-all duration-500"
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 text-white">
-                  <h4 className="text-2xl font-bold mb-2">{activeCard.title}</h4>
+                  <h4 className="text-2xl text-white font-bold mb-2">{activeCard.title}</h4>
                   <p className="text-base leading-relaxed">{activeCard.text}</p>
                 </div>
               </div>
 
-              <div className="flex justify-center gap-4 pt-2">
+              <div className="flex text-white justify-center gap-4 pt-2">
                 {data.map((card, index) =>
                   index !== activeIndex ? (
                     <div

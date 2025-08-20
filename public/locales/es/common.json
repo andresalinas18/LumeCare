@@ -37,26 +37,14 @@
   "missionTitle": "Nuestra Misión",
   "missionText": "Al construir alianzas exclusivas con especialistas certificados en Cali y dedicarnos a un apoyo cálido y personal, mantenemos un compromiso inquebrantable con la ética, la salud y tu belleza auténtica."
 },
-  "journey": {
-    "title": "LumeCare",
-    "subtitle": "Rompiendo las reglas",
+   "journey": {
+    "title": "Tu viaje con LumeCare",
+    "cta": "Agenda Tu consulta",
     "steps": [
-      {
-        "title": "La Consulta: Donde Entendemos tu Visión",
-        "description": "Este es el inicio de nuestra alianza. Comienza con una conversación cálida y confidencial donde escuchamos atentamente tus aspiraciones. No solo te oímos; te entendemos. Terminarás esta fase sintiéndote escuchada, segura y emocionada por lo que viene."
-      },
-      {
-        "title": "El Plano: Claridad y Confianza en el Diseño",
-        "description": "La claridad es amabilidad. Recibirás un plan detallado y todo incluido que será tu guía personal. Describe todo—desde los detalles del procedimiento hasta los costos transparentes. Nos encargamos de las complejidades para que apruebes tu plan con total confianza."
-      },
-      {
-        "title": "La Experiencia LumeCare: Apoyo Inquebrantable en Cali",
-        "description": "Desde el momento en que aterrizas, estás bajo nuestro cuidado. Tu procedimiento será realizado por un especialista de clase mundial y tu recuperación será en un entorno sereno. Tu único trabajo es enfocarte en ti. Nosotros nos encargamos del resto."
-      },
-      {
-        "title": "El Compromiso de por Vida: Más Allá de tu Regreso a Casa",
-        "description": "Nuestra alianza no termina cuando vuelves a casa—evoluciona. A través de seguimientos virtuales, celebramos tus resultados y aseguramos tu tranquilidad. Regresas empoderada, sabiendo que tienes un socio dedicado a tu belleza y bienestar de por vida."
-      }
+      { "label": "Pre‑consulta", "title": "Habla con nosotros", "description": "Antes de tu viaje, tendrás una consulta inicial en línea donde evaluamos tu caso, escuchamos tus objetivos y resolvemos todas tus dudas. Aquí definimos si eres un buen candidato para el procedimiento y te damos la tranquilidad de conocer de antemano al equipo médico que te atenderá." },
+      { "label": "Plan & precios", "title": "Plan personalizado", "description": "Con base en tu evaluación, diseñamos un plan personalizado adaptado a tus necesidades. Te compartimos los costos detallados, los tiempos estimados de recuperación y todo lo que está incluido, para que tengas una visión clara y sin sorpresas ocultas." },
+      { "label": "Viaje y estadía", "title": "Llegada a Cali", "description": "Coordinamos tu viaje a Cali y tu estadía durante el tratamiento. Te ayudamos con opciones de alojamiento seguras y cómodas, transporte confiable y asistencia local para que tu experiencia sea fluida y sin preocupaciones." },
+      { "label": "Resultados", "title": "Transformacion y retorno a casa", "description": "Nuestro equipo te acompaña en el seguimiento post-procedimiento, asegurándonos de que obtengas los resultados esperados y de que tu recuperación sea óptima. Al regresar a casa, cuentas con nuestro apoyo remoto para resolver cualquier inquietud y garantizar tu satisfacción total." }
     ]
   },
   "procedures": {

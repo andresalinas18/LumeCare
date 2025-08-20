@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import About from '../components/About'
+import Story from '../components/StoryStepper'
 import JourneyMapSection from "../components/JourneyMapSection"
 import Procedures from '../components/Procedures'
 import LumeCareCTA from '../components/LumeCareCTA'
@@ -35,7 +36,7 @@ export default function Home() {
       <main id="main" aria-label="LumeCare main content">
         <Hero />
         <About />
-        <JourneyMapSection />
+        <Story />
         <Procedures />
         <LumeCareCTA />
         <TestimonialGrid />

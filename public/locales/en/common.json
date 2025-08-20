@@ -36,29 +36,19 @@
   "missionIntro": "LumeCare wasn't created to be just another service. It was born from a deeply personal purpose: to make the dream of aesthetic transformation a reality that is safe, human, and truly empowering.",
   "missionTitle": "Our Mission",
   "missionText": "By building exclusive partnerships with board-certified specialists in Cali and dedicating ourselves to warm, personal support, we uphold an unwavering commitment to ethics, health, and your authentic beauty."
-},
-  "journey": {
-    "title": "LumeCare",
-    "subtitle": "It's Breaking the rules",
-    "steps": [
-      {
-        "title": "The Consultation: Where Your Vision is Understood",
-        "description": "This is the beginning of our partnership. It starts with a warm, confidential conversation where we listen intently to your aspirations. We don't just hear you; we understand you. You'll finish this phase feeling heard, safe, and excited for what's to come."
-      },
-      {
-        "title": "The Blueprint: Clarity and Confidence by Design",
-        "description": "Clarity is kindness. You will receive a meticulously detailed, all-inclusive plan that serves as your personal blueprint. It outlines everything—from procedure details to transparent pricing. We handle the complexities so you can approve your plan with absolute confidence."
-      },
-      {
-        "title": "The LumeCare Experience: Unwavering Support in Cali",
-        "description": "From the moment you land, you are under our care. Your procedure will be performed by a world-class specialist, and your recovery will be in a serene environment. Your only job is to focus on yourself. We handle the rest."
-      },
-      {
-        "title": "The Lifelong Commitment: Beyond Your Return Home",
-        "description": "Our partnership doesn't end when you fly home—it evolves. Through virtual follow-ups, we celebrate your results and ensure your peace of mind. You return empowered, knowing you have a dedicated partner in your beauty and wellness for life."
-      }
-    ]
   },
+  "journey": {
+    "title": "Your Journey with LumeCare",
+    "cta": "Book consultation",
+    "steps": [
+      { "label": "Pre‑consultation", "title": "Talk to us", "description": "Before your trip, you’ll have an online consultation where we evaluate your case, listen to your goals, and answer all your questions. This step ensures you’re a good candidate for the procedure and helps you get to know the medical team in advance." },
+      { "label": "Plan & pricing", "title": "Personalized plan", "description": "Based on your evaluation, we design a personalized treatment plan tailored to your needs. You’ll receive detailed costs, estimated recovery times, and everything included—giving you full transparency with no hidden surprises." },
+      { "label": "Travel & stay", "title": "Arrive in Cali", "description": "We coordinate your journey to Cali and your stay during the treatment. From safe and comfortable accommodation to reliable transportation and local assistance, we make sure your experience is smooth and worry-free." },
+      { "label": "Results", "title": "Transformation & return", "description": "Our team provides post-procedure follow-up, ensuring you achieve the expected results and recover optimally. Even after you return home, you’ll have our remote support to address any concerns and guarantee your complete satisfaction." }
+    ]
+  
+},
+
   "procedures": {
   "ariaLabel": "Our Medical Procedures",
   "items": [

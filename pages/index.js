@@ -3,7 +3,6 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Story from '../components/StoryStepper'
-import JourneyMapSection from "../components/JourneyMapSection"
 import Procedures from '../components/Procedures'
 import LumeCareCTA from '../components/LumeCareCTA'
 import TestimonialGrid from '../components/TestimonialGrid'

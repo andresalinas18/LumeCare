@@ -161,7 +161,7 @@ export default function StoryStepper({ bgSrc = "/images/stepSectionBg.webp" }) {
 
               <div className="mt-6">
                 <a
-                  href="#contact"
+                  href="#quick-quote"
                   className="inline-block px-7 py-3 rounded-md font-lato font-bold uppercase tracking-[.12em] bg-gradient-to-b from-[#C9A475] to-[#B58E5E] hover:brightness-110 transition shadow-[0_10px_24px_rgba(0,0,0,.25)]"
                 >
                   {journey.cta}
@@ -174,7 +174,7 @@ export default function StoryStepper({ bgSrc = "/images/stepSectionBg.webp" }) {
         {/* CTA SOLO MOBILE */}
         <div className="lg:hidden flex justify-center mt-12">
           <a
-            href="#contact"
+            href="#quick-quote"
             className="inline-block px-7 py-3 rounded-md font-lato font-bold uppercase tracking-[.12em] bg-gradient-to-b from-[#C9A475] to-[#B58E5E] hover:brightness-110 transition shadow-[0_10px_24px_rgba(0,0,0,.25)]"
           >
             {journey.cta}

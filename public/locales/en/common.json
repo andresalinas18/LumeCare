@@ -2,8 +2,8 @@
   "hero": {
     "title": "Your Transformation, \nGuided with LumeCare.",
     "description": "Discover world-class aesthetic results with the confidence of dedicated, personal support. LumeCare is your trusted partner for a safe and empowering medical journey in Cali, Colombia.",
-    "cta": "Explore Our Procedures",
-    "cta_aria": "Explore our aesthetic procedures"
+    "cta": "Get my Free Quick Quote (24h)",
+    "cta_aria": "Get a free Quick Quote"
   },
   "nav": {
     "home": "Home",
@@ -11,7 +11,7 @@
     "journey": "Your Journey",
     "procedures": "Procedures",
     "reviews": "Reviews",
-    "contact": "Contact Us"
+    "contact": "Free Quick Quote"
   },
   "about": {
   "heading": "More Than an Agency.\nWe're Your Partners in Transformation.",
@@ -39,7 +39,7 @@
   },
   "journey": {
     "title": "Your Journey with LumeCare",
-    "cta": "Book consultation",
+    "cta": "Get my Free Quick Quote",
     "steps": [
       { "label": "Pre‑consultation", "title": "Talk to us", "description": "Before your trip, you’ll have an online consultation where we evaluate your case, listen to your goals, and answer all your questions. This step ensures you’re a good candidate for the procedure and helps you get to know the medical team in advance." },
       { "label": "Plan & pricing", "title": "Personalized plan", "description": "Based on your evaluation, we design a personalized treatment plan tailored to your needs. You’ll receive detailed costs, estimated recovery times, and everything included—giving you full transparency with no hidden surprises." },
@@ -127,7 +127,7 @@
       { "first": "Move", "second": "freely" },
       { "first": "Move", "second": "with purpose" }
     ],
-    "button": "Schedule an Online Consultation"
+    "button": "Get my Free Quick Quote"
   },
   "testimonials": {
     "title": "What Our Patients Say",
@@ -175,7 +175,7 @@
     ]
   },
   "contact": {
-  "title": "Let’s talk about your journey",
+  "title": "Free pre-evaluation. No commitment. Reply in <24h.",
   "description": "Fill out the form and one of our LumeCare specialists will get in touch to help you take the first step toward your transformation.",
   "firstName": "First Name*",
   "lastName": "Last Name*",
@@ -187,7 +187,7 @@
   "submit": "Submit",
   "alertConsent": "Please accept the terms before submitting.",
   "error": "There was an error sending the message. Please try again.",
-  "success": "Your form has been submitted successfully!"
+  "success": "Thanks! A Care Coordinator will text you on WhatsApp within hours."
 }
 
 

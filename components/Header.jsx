@@ -112,7 +112,7 @@ export default function Header() {
 
           {/* Contact Button */}
           <a
-            href="#contact"
+            href="#quick-quote"
             onClick={(e) => {
               handleLinkClick(e);
               if (process.env.NODE_ENV === "production") {
@@ -133,7 +133,7 @@ export default function Header() {
         <div className="flex items-center gap-3 lg:hidden">
           {/* Contact Button Mobile */}
           <a
-            href="#contact"
+            href="#quick-quote"
             id="contact-us-button" 
             onClick={(e) => {
               handleLinkClick(e);

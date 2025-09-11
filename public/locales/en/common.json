@@ -181,7 +181,7 @@
   "lastName": "Last Name*",
   "phone": "Phone*",
   "email": "Email",
-  "procedure": "Procedure of Interest",
+  "procedure": "Procedure of Interest (Vaneers, Implants, Smile design, Others)",
   "comments": "Comments",
   "consent": "By completing this form, you are giving us permission to follow up by phone, email or text.",
   "submit": "Submit",

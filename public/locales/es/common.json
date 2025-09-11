@@ -180,7 +180,7 @@
   "lastName": "Apellido*",
   "phone": "Teléfono*",
   "email": "Correo",
-  "procedure": "Procedimiento de interés",
+  "procedure": "Procedimiento de interés (Carillas, Implantes, Diseño de sonrisa, Otros)",
   "comments": "Comentarios",
   "consent": "Al completar este formulario, nos das permiso para contactarte por teléfono, correo o mensaje de texto.",
   "submit": "Enviar",

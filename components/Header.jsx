@@ -1,5 +1,5 @@
 // components/Header.jsx
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
@@ -26,6 +26,22 @@ export default function Header() {
     setLastScrollY(currentScrollY);
   };
 
+  const [isCtaOpen, setIsCtaOpen] = useState(false);
+  const ctaRef = useRef(null);
+
+  useEffect(() => {
+  function handleClickOutside(e) {
+    if (ctaRef.current && !ctaRef.current.contains(e.target)) {
+      setIsCtaOpen(false);
+    }
+  }
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
+
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -49,6 +65,7 @@ export default function Header() {
   };
 
   return (
+    <>
     <header
       id="home"
       className={`fixed top-[15px] left-[15px] right-[15px] z-[100] 
@@ -117,7 +134,7 @@ export default function Header() {
           {/* Contact Button Mobile */}
           <a
             href="#contact"
-            id="contact-us-button" // ← AGREGA ESTA LÍNEA
+            id="contact-us-button" 
             onClick={(e) => {
               handleLinkClick(e);
               if (process.env.NODE_ENV === "production") {
@@ -170,5 +187,36 @@ export default function Header() {
         )}
       </nav>
     </header>
+    
+      <div ref={ctaRef} className="fixed bottom-6 right-6 z-[200]">
+        <div className='relative flex flex-col items-end'>
+          <button
+            onClick={()=> setIsCtaOpen(!isCtaOpen)}
+            className="bg-primary hover:bg-primary-dark starting:open:opacity-0 text-white p-4 rounded-full shadow-xl"
+          >
+            💬
+          </button>
+        
+      {isCtaOpen && (
+        <div className='absolute bottom-full mb-3 flex flex-col gap-2 bg-white shadow-xl rounded-xl p-3'>
+          <a 
+          href="https://www.facebook.com/profile.php?id=61576532674215"
+          target="_blank"
+          className="text-blue-500 font-semibold hover:bg-gray-100 px-3 py-2 rounded-lg"
+          >
+            Facebook
+          </a>
+          <a 
+          href="https://www.instagram.com/lumecareofficial/"
+          target="_blank"
+          className="text-black font-semibold hover:bg-gray-100 px-3 py-2 rounded-lg"
+          >
+            Instagram
+          </a>
+        </div>
+      )}
+    </div>
+    </div>
+    </>
   );
 }
